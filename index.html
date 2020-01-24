@@ -32,21 +32,36 @@
 }
     </style>
     <style>
+        .fixbox{
+            padding:1px;
+        }
         @media only screen and (max-width: 600px) {
         .logo_containers {height:10vh;width:80vw;}
-        .logo_containers > div{height:5vh;width:10vw;}}
+        .logo_containers > div{height:auto;width:10vw;}}
+        @media only screen and (min-height: 786px) {
+        .logo_containers {height:10vh;width:80vw;}
+        .logo_containers > div{height:auto;width:10vw;}}
+        
         @media only screen and (min-width: 600px) {
         .logo_containers {height:10vh;width:80vw;}
-        .logo_containers > div{height:6vh;width:13vw;}}
+        .logo_containers > div{height:auto;width:13vw;}}
+        
         @media only screen and (min-width: 768px) {
         .logo_containers {height:10vh;width:80vw;}}
-        .logo_containers > div{height:5vh;width:10vw;}} 
+        .logo_containers > div{height:auto;width:10vw;}} 
+        
         @media only screen and (min-width: 992px) {
         .logo_containers {height:10vh;width:80vw;}}
-        .logo_containers > div{height:7vh;width:10vw;}}
+        .logo_containers > div{height:auto;width:10vw;}}
+        
         @media only screen and (min-width: 1200px) {
         .logo_containers {height:10vh;width:80vw;}}
-        .logo_containers > div{height:7vh;width:10vw;}}
+        .logo_containers > div{height:auto;width:10vw;}}
+        @media only screen and (min-width: 1200px) {
+        .logo_containers {height:10vh;width:80vw;}}
+        .logo_containers > div{height:auto;width:10vw;}}
+        
+        
     </style>
     </head>
     <body>
@@ -59,15 +74,16 @@
                         -webkit-text-fill-color: transparent;">WELCOME</i></div>
                     <div class="logo_containers"> 
                            
-                    <div onmouseover="current_icon1()" class="w3-btn w3-animate-left" style="padding:1px; animation-duration: .8s;animation-timing-function: ease-out "> <i style="height:100%;width=100%;padding:1px;" class=" far fa-calendar-alt"></i></div>
-                    <div onmouseover="current_icon2()"class="w3-btn w3-animate-top" style="padding:1px; animation-duration: .8s;animation-timing-function: ease-out"> <i class="far fa-calendar-alt"></i></div>
-                    <div onmouseover="current_icon3()"class="w3-btn w3-animate-bottom" style="padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><i class="far fa-calendar-alt"></i></div>
-                    <div onmouseover="current_icon4()"class="w3-btn w3-animate-right" style="padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><i class="far fa-calendar-alt"></i></div>
+                    <div onmouseover="current_icon1()" class="w3-btn w3-animate-left" style="padding:1px; animation-duration: .8s;animation-timing-function: ease-out "> <i style="height:auto%;width=100px%;padding:1px;" class="fixbox far fa-calendar-alt"></i></div>
+                    <div onmouseover="current_icon2()"class="w3-btn w3-animate-top" style="padding:1px; animation-duration: .8s;animation-timing-function: ease-out"> <i class="fixbox far fa-calendar-alt"></i></div>
+                    <div onmouseover="current_icon3()"class="w3-btn w3-animate-bottom" style="padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><i class="fixbox far fa-calendar-alt"></i></div>
+                    <div onmouseover="current_icon4()"class="w3-btn w3-animate-right" style="padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><i class="fixbox far fa-calendar-alt"></i></div>
                     
                         </div>
-                        
+                        <i class="w3-bottom w3-text-white"> Developed by ...</i>
             </div>              
     </body>
+    
     <script>
         function current_icon1(){var text=document.getElementById("text_icon").innerHTML = "EVENTS";}
         function current_icon2(){var text=document.getElementById("text_icon").innerHTML = "WORKSHOPS";}
