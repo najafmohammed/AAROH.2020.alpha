@@ -33,31 +33,47 @@
     </style>
     <style>
         @media only screen and (min-width: 600px) {
-        .logo_containers {height:10vh;}}
+        .logo_containers {height:10vh;width:80vw;}}
         @media only screen and (min-width: 768px) {
-        .logo_containers {height:10vh;}} 
+        .logo_containers {height:10vh;width:80vw;}} 
         @media only screen and (min-width: 992px) {
-        .logo_containers {height:10vh;}}
+        .logo_containers {height:10vh;width:80vw;}}
         @media only screen and (min-width: 1200px) {
-        .logo_containers {height:10vh;}}
+        .logo_containers {height:10vh;width:80vw;}}
     </style>
     </head>
     <body>
+        
             <div id="particles-js" class="custom">    
-                    <div class="text_1 a anim">AAROH</div>
+                    <div class="text_1 a anim">AAROH</div>background-color: #923cb5;
+                    background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
                     <div class="text_2 a anim">2020</div>
+                    <div class="logo_text"> <i id=text_icon class=" w3-xlarge w3-animate-left" style="background: linear-gradient(188deg, #04619F 99%, #000000 90%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;">WELCOME</i></div>
                     <div class="logo_containers"> 
-                    <div> <i class="far fa-calendar-alt"></i></div>
-                       <div> <i class="far fa-calendar-alt"></i></div>
-                        <div><i class="far fa-calendar-alt"></i></div>
+                           
+                    <div onmouseover="current_icon1()" class="w3-btn w3-animate-left" style="animation-duration: .8s;animation-timing-function: ease-out"> <i class=" far fa-calendar-alt"></i></div>
+                    <div onmouseover="current_icon2()"class="w3-btn w3-animate-top" style="animation-duration: .8s;animation-timing-function: ease-out"> <i class="far fa-calendar-alt"></i></div>
+                    <div onmouseover="current_icon3()"class="w3-btn w3-animate-bottom" style="animation-duration: .8s;animation-timing-function: ease-out"><i class="far fa-calendar-alt"></i></div>
+                    <div onmouseover="current_icon4()"class="w3-btn w3-animate-right" style="animation-duration: .8s;animation-timing-function: ease-out"><i class="far fa-calendar-alt"></i></div>
+                    
                         </div>
                         
             </div>              
     </body>
+    <script>
+        function current_icon1(){var text=document.getElementById("text_icon").innerHTML = "EVENTS";}
+        function current_icon2(){var text=document.getElementById("text_icon").innerHTML = "WORKSHOPS";}
+        function current_icon3(){var text=document.getElementById("text_icon").innerHTML = "GALLERY";}
+        function current_icon4(){var text=document.getElementById("text_icon").innerHTML = "EVENTS";}
+        
+    </script>
     <script src="js/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/6dbb42599d.js" crossorigin="anonymous"></script>
     <script src="js/TimelineMaxmin.js"></script>
     <script src="js/TweenMax.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="js/particle_anim.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </html>

@@ -4,7 +4,7 @@ const particlesJSON = {
             "value": 20,
             "density": {
                 "enable": true,
-                "value_area": 350
+                "value_area": 450
             }
         },
         "color": {
@@ -17,7 +17,7 @@ const particlesJSON = {
                 "color": "cyan"
             },
             "polygon": {
-                "nb_sides": 6
+                "nb_sides": 7,
             },
             "image": {
                 "src": "img/github.svg",
@@ -35,19 +35,19 @@ const particlesJSON = {
         },
         "line_linked": {
             "enable": false,
-            "distance": 200,
+            "distance": 100,
             "color": "#ff5722",
             "opacity": 0.3,
             "width": 2
         },
         "move": {
             "enable": true,
-            "speed": 5,
+            "speed": 6,
             "direction": "bottom",
             "random": true,
             "straight": false,
             "out_mode": "out",
-            "bounce": true,
+            "bounce": false,
             "attract": {
                 "enable": false,
                 "rotateX": 600,
