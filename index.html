@@ -34,31 +34,32 @@
     <style>
         .fixbox{
             padding:1px;
+            max-width:200px;
         }
         @media only screen and (max-width: 600px) {
-        .logo_containers {height:10vh;width:80vw;}
+        .logo_containers {height:15vh;width:80vw;}
         .logo_containers > div{height:auto;width:10vw;}}
         @media only screen and (min-height: 786px) {
-        .logo_containers {height:10vh;width:80vw;}
+        .logo_containers {height:15vh;width:80vw;}
         .logo_containers > div{height:auto;width:10vw;}}
         
         @media only screen and (min-width: 600px) {
-        .logo_containers {height:10vh;width:80vw;}
+        .logo_containers {height:15vh;width:80vw;}
         .logo_containers > div{height:auto;width:13vw;}}
         
         @media only screen and (min-width: 768px) {
-        .logo_containers {height:10vh;width:80vw;}}
+        .logo_containers {height:15vh;width:80vw;}}
         .logo_containers > div{height:auto;width:10vw;}} 
         
         @media only screen and (min-width: 992px) {
-        .logo_containers {height:10vh;width:80vw;}}
+        .logo_containers {height:15vh;width:80vw;}}
         .logo_containers > div{height:auto;width:10vw;}}
         
         @media only screen and (min-width: 1200px) {
-        .logo_containers {height:10vh;width:80vw;}}
+        .logo_containers {height:15vh;width:80vw;}}
         .logo_containers > div{height:auto;width:10vw;}}
         @media only screen and (min-width: 1200px) {
-        .logo_containers {height:10vh;width:80vw;}}
+        .logo_containers {height:15vh;width:80vw;}}
         .logo_containers > div{height:auto;width:10vw;}}
         
         
@@ -66,18 +67,20 @@
     </head>
     <body>
         
-            <div id="particles-js" class="custom">    
-                    <div class="text_1 a anim">AAROH</div>
+            <div id="particles-js" class="custom">
+                <div style="animation-duration: 7.5s;animation-timing-function: ease-out" class="w3-animate-opacity">    
+                    <div  class="text_1 a  anim">AAROH</div>
                     <div class="text_2 a anim">2020</div>
+                </div>
                     <div class="logo_text"> <i id=text_icon class=" w3-xlarge w3-animate-left" style="background: linear-gradient(188deg, #04619F 99%, #000000 90%);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;">WELCOME</i></div>
                     <div class="logo_containers"> 
                            
-                    <div onmouseover="current_icon1()" class="w3-btn w3-animate-left" style="padding:1px; animation-duration: .8s;animation-timing-function: ease-out "> <i style="height:auto%;width=100px%;padding:1px;" class="fixbox far fa-calendar-alt"></i></div>
-                    <div onmouseover="current_icon2()"class="w3-btn w3-animate-top" style="padding:1px; animation-duration: .8s;animation-timing-function: ease-out"> <i class="fixbox far fa-calendar-alt"></i></div>
-                    <div onmouseover="current_icon3()"class="w3-btn w3-animate-bottom" style="padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><i class="fixbox far fa-calendar-alt"></i></div>
-                    <div onmouseover="current_icon4()"class="w3-btn w3-animate-right" style="padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><i class="fixbox far fa-calendar-alt"></i></div>
+                    <div onmouseover="current_icon1()" class="w3-btn w3-animate-left" style=height:auto;margin-left:3vw;flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out "> <i class="fixbox far fa-calendar-alt"></i></div>
+                    <div onmouseover="current_icon2()"class="w3-btn w3-animate-top" style="flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"> <i class="fixbox far fa-calendar-alt"></i></div>
+                    <div onmouseover="current_icon3()"class="w3-btn w3-animate-bottom" style="flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><i class="fixbox far fa-calendar-alt"></i></div>
+                    <div onmouseover="current_icon4()"class="w3-btn w3-animate-right" style="margin-right:3vw;flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><i class="fixbox far fa-calendar-alt"></i></div>
                     
                         </div>
                         <i class="w3-bottom w3-text-white"> Developed by ...</i>

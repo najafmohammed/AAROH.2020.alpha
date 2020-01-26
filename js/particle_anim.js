@@ -49,7 +49,7 @@ const particlesJSON = {
             "out_mode": "out",
             "bounce": false,
             "attract": {
-                "enable": false,
+                "enable": true,
                 "rotateX": 600,
                 "rotateY": 1200
             }
@@ -61,8 +61,8 @@ const particlesJSON = {
             "onhover": {
                 "enable": true,
                 "mode": [
-                    "grab",
-                    "bubble"
+                    "bubble",
+                    "repulse"  
                 ]
             },
             "onclick": {
@@ -73,7 +73,7 @@ const particlesJSON = {
         },
         "modes": {
             "grab": {
-                "distance": 400,
+                "distance": 200,
                 "line_linked": {
                     "opacity": 0.7
                 }
@@ -86,7 +86,7 @@ const particlesJSON = {
                 "speed": 1
             },
             "repulse": {
-                "distance": 400,
+                "distance": 200,
                 "duration": 0.4
             },
             "push": {
