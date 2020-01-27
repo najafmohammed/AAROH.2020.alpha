@@ -3,6 +3,7 @@
 <html>
     <head>
             <link rel="stylesheet" href="css/homepage.css">
+            <link rel="stylesheet" href="font/fontstyle.css">
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,19 +23,20 @@
         }
     </style>
     <style>
-      @font-face 
-{
-    font-family: 'anuratiregular';
-    src: url("font/anurati-regular-webfont.woff2") format('woff2'),
-         url("font/anurati-regular-webfont.woff") format('woff');
-    font-weight: normal;
+      
+@font-face {
+    font-family: 'FuturaMdBTMedium';
     font-style: normal;
-}
+    font-weight: normal;
+    src: url("font/futuram.woff") format('woff');
+    }
+    
     </style>
     <style>
         .fixbox{
-            padding:1px;
-            max-width:200px;
+            display: inline-block;
+            width:100%;
+            height:100%;
         }
         @media only screen and (max-width: 600px) {
         .logo_containers {height:15vh;width:80vw;}
@@ -65,28 +67,39 @@
         
     </style>
     </head>
-    <body>
+    <body onload="welcome_msg()">
         
-            <div id="particles-js" class="custom">
+        <div id="particles-js" class="custom"> 
+                <div id ="message" class="text_2 w3-text-purple a ">Welcome</div>
                 <div style="animation-duration: 7.5s;animation-timing-function: ease-out" class="w3-animate-opacity">    
-                    <div  class="text_1 a  anim">AAROH</div>
-                    <div class="text_2 a anim">2020</div>
+                    <div  class="text_1 a  anim">AAROH '20</div>
                 </div>
-                    <div class="logo_text"> <i id=text_icon class=" w3-xlarge w3-animate-left" style="background: linear-gradient(188deg, #04619F 99%, #000000 90%);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;">WELCOME</i></div>
+                    <div class="logo_text"> <i id=text_icon class=" w3-xlarge w3-animate-left">.</i> </div>
                     <div class="logo_containers"> 
                            
-                    <div onmouseover="current_icon1()" class="w3-btn w3-animate-left" style=height:auto;margin-left:3vw;flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out "> <i class="fixbox far fa-calendar-alt"></i></div>
+                    <div onmouseover="current_icon1()" class="w3-btn w3-animate-left" style=height:auto;margin-left:3vw;flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out "> <a href="pages/Events/Event 1.html"><i class="fixbox far fa-calendar-alt"></i></a></div>
                     <div onmouseover="current_icon2()"class="w3-btn w3-animate-top" style="flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"> <i class="fixbox far fa-calendar-alt"></i></div>
                     <div onmouseover="current_icon3()"class="w3-btn w3-animate-bottom" style="flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><i class="fixbox far fa-calendar-alt"></i></div>
                     <div onmouseover="current_icon4()"class="w3-btn w3-animate-right" style="margin-right:3vw;flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><i class="fixbox far fa-calendar-alt"></i></div>
-                    
-                        </div>
+                
+                    </div>
                         <i class="w3-bottom w3-text-white"> Developed by ...</i>
-            </div>              
+        </div>              
     </body>
-    
+    <script>
+        var myvar;
+        function welcome_msg()
+        {
+            
+            var text=document.getElementById("message").innerHTML = "RISE HIGH";
+            myVar = setTimeout(next,2000);
+            function next(){ //optimal about 3500
+            var text=document.getElementById("message").innerHTML = "RISE BRIGHT";
+            
+            }
+            
+        }
+        </script>
     <script>
         function current_icon1(){var text=document.getElementById("text_icon").innerHTML = "EVENTS";}
         function current_icon2(){var text=document.getElementById("text_icon").innerHTML = "WORKSHOPS";}

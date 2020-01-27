@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+        body,html 
+        {
+            margin: 0 auto;
+            height: 100%;
+            width: 100%;
+            scroll-behavior: smooth;
+            background: black;
+            
+        }
+        .parallelogram1 {
+        animation-duration: .4s;animation-timing-function: ease-out;
+        left: -1%;
+	    width: 30vw;
+        height: 4vh;
+        border-style: solid;
+        border-color: black;
+	    transform: skew(340deg);
+	    background: #6a42a2;
+        }
+        .parallelogram2 {
+        animation-duration: .6s;animation-timing-function: ease-out;
+        left: -1%;
+	    width: 25vw;
+        height: 4vh;
+        border-style: solid;
+        border-color: black;
+	    transform: skew(340deg);
+	    background: #555;
+        }
+        .parallelogram3 {
+        animation-duration: .8s;animation-timing-function: ease-out;
+        left: -1%;
+	    width: 20vw;
+        height: 4vh;
+        border-style: solid;
+        border-color: black;
+	    transform: skew(340deg);
+	    background: #555;
+        }
+        .parallelogram4 {
+        animation-duration: 1s;animation-timing-function: ease-out;
+        left: -1%;
+	    width: 15vw;
+        height: 4vh;
+        border-style: solid;
+        border-color: black;
+	    transform: skew(340deg);
+	    background: #555;
+        }
+        .custom
+        {
+          height: 100%;
+          width:100%;
+          background-image: url("cp_background.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+        }
+    </style>
+    <body>
+            <div id="particles-js" class="custom">
+        <h1 style="float: right;" class="w3-text-white">EVENTS</h1>
+            <div class="w3-button w3-left parallelogram1 w3-animate-left" style="position: absolute"><i class="w3-display-right" style="margin-right:4vw">EVENT NAME</i></div>
+            <div class="w3-button w3-left  parallelogram2 w3-animate-left" style="position: absolute"><i class="w3-display-right" style="margin-right:4vw">Rules & regulation</i></div>
+            <div class="w3-button w3-left  parallelogram3 w3-animate-left" style="position: absolute"><i class="w3-display-right" style="margin-right:3vw">Registration</i></div>
+            <div class="w3-button w3-left  parallelogram4 w3-animate-left" style="position: absolute"><i class="w3-display-right" style="margin-right:3vw">Contact</i></div>
+           </div>
+    </body>
+    <script src="particle_anim1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+</html>

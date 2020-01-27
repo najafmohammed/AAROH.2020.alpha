@@ -1,53 +1,44 @@
-const particlesJSON = {
+const particles1JSON = {
     "particles": {
         "number": {
-            "value": 30,
+            "value": 10,
             "density": {
                 "enable": false
                 
             }
         },
         "color": {
-            "value": "#261841"
+            "value": "#9be7ff"
         },
         "shape": {
-            "type": "polygon",
-            "stroke": {
-                "width": 1,
-                "color": "#610cfd"
-              },
-              "polygon": {
-                "nb_sides": 3
-              },
-            
+            "type": "circle",
         },
-        
         "opacity": {
             "value": 0.5,
             "random": true
         },
         "size": {
-            "value": 30,
+            "value": 10,
             "random": true
         },
         "line_linked": {
-            "enable": true,
+            "enable": false,
             "distance": 100,
-            "color": "#610cfd",
+            "color": "#ff5722",
             "opacity": 0.3,
             "width": 2
         },
         "move": {
             "enable": true,
-            "speed": 10,
-            "direction": "left",
+            "speed": 6,
+            "direction": "bottom",
             "random": true,
             "straight": false,
             "out_mode": "out",
             "bounce": false,
             "attract": {
                 "enable": true,
-                "rotateX": 2600,
+                "rotateX": 600,
                 "rotateY": 1200
             }
         }
@@ -97,4 +88,4 @@ const particlesJSON = {
     "retina_detect": true
   }
   
-  particlesJS("particles-js", particlesJSON)
+  particlesJS("particle-js", particles1JSON)
