@@ -32,7 +32,7 @@ const particlesJSON = {
         },
         "line_linked": {
             "enable": true,
-            "distance": 100,
+            "distance": 200,
             "color": "#610cfd",
             "opacity": 0.3,
             "width": 2

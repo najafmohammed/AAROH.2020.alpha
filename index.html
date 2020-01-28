@@ -6,6 +6,7 @@
             <link rel="stylesheet" href="font/fontstyle.css">
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
             <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body,html 
@@ -14,6 +15,10 @@
             height: 100%;
             width: 100%;
             scroll-behavior: smooth;
+            background-image: url("background_main.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         img 
         {
@@ -40,7 +45,8 @@
         }
         @media only screen and (max-width: 600px) {
         .logo_containers {height:15vh;width:80vw;}
-        .logo_containers > div{height:auto;width:10vw;}}
+        .logo_containers > div{height:auto;width:10vw;}
+        }
         @media only screen and (min-height: 786px) {
         .logo_containers {height:15vh;width:80vw;}
         .logo_containers > div{height:auto;width:10vw;}}
@@ -50,52 +56,137 @@
         .logo_containers > div{height:auto;width:13vw;}}
         
         @media only screen and (min-width: 768px) {
-        .logo_containers {height:15vh;width:80vw;}}
+        .logo_containers {height:15vh;width:80vw;}
         .logo_containers > div{height:auto;width:10vw;}} 
         
         @media only screen and (min-width: 992px) {
-        .logo_containers {height:15vh;width:80vw;}}
-        .logo_containers > div{height:auto;width:10vw;}}
+        .logo_containers {height:15vh;width:80vw;}
+        .logo_containers > div{height:auto;width:10vw;}
+        .logo_text_containers{top: 90%;}
+        .ring_logo{height: 20vh;width:20vw;}
+        }
         
         @media only screen and (min-width: 1200px) {
-        .logo_containers {height:15vh;width:80vw;}}
-        .logo_containers > div{height:auto;width:10vw;}}
-        @media only screen and (min-width: 1200px) {
-        .logo_containers {height:15vh;width:80vw;}}
-        .logo_containers > div{height:auto;width:10vw;}}
+        .logo_containers {height:15vh;width:80vw;}
+        .logo_containers > div{height:auto;width:10vw;}
+        .logo_text_containers{top: 90%;}
+        .ring_logo{height: 10vh;width:10vw;}
+        }
         
-        
+.dragger {
+  width: 80px;
+  height: 80px;
+  
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  top:35%;
+  left: 48%;
+  transform: rotateY(0deg) rotate(320deg); /* needs Y at 0 deg to behave properly*/
+    /*transition: transform .1s;*/
+}
+.dragger1 {
+  width: 80px;
+  height: 80px;
+  
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  top:35%;
+  left: 48%;
+  transform: rotateY(0deg) rotate(320deg); /* needs Y at 0 deg to behave properly*/
+    /*transition: transform .1s;*/
+}
+.ring_logo
+{
+    width: 15vw;
+  height: 15vh;
+  max-width: 500px;
+  max-height: 500px;
+    position: absolute;
+    top:25%;
+    left:43%;
+}
     </style>
     </head>
     <body onload="welcome_msg()">
-        
+            <div class="ring_logo"><img class="world" src="ring_logo.png" alt="image"></div>
+            <div id="dragger" class="dragger"><img id="rocket" src="test rocket.png" alt="image"></div>
         <div id="particles-js" class="custom"> 
-                <div id ="message" class="text_2 w3-text-purple a ">Welcome</div>
+                <div id ="message" class="text_2 w3-text-purple a ">Welcome </div>
+                
                 <div style="animation-duration: 7.5s;animation-timing-function: ease-out" class="w3-animate-opacity">    
                     <div  class="text_1 a  anim">AAROH '20</div>
                 </div>
                     <div class="logo_text"> <i id=text_icon class=" w3-xlarge w3-animate-left">.</i> </div>
-                    <div class="logo_containers"> 
-                           
-                    <div onmouseover="current_icon1()" class="w3-btn w3-animate-left" style=height:auto;margin-left:3vw;flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out "> <a href="pages/Events/Event 1.html"><i class="fixbox far fa-calendar-alt"></i></a></div>
-                    <div onmouseover="current_icon2()"class="w3-btn w3-animate-top" style="flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"> <i class="fixbox far fa-calendar-alt"></i></div>
-                    <div onmouseover="current_icon3()"class="w3-btn w3-animate-bottom" style="flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><i class="fixbox far fa-calendar-alt"></i></div>
-                    <div onmouseover="current_icon4()"class="w3-btn w3-animate-right" style="margin-right:3vw;flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><i class="fixbox far fa-calendar-alt"></i></div>
-                
+                    <div class="logo_containers">   
+                    <div onmouseover="current_icon1()" class="w3-btn w3-animate-left" style=height:auto;margin-left:3vw;flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out "> <a href="pages/Events/Event 1.html"><i class="fixbox far fa-calendar-alt "></a></i></div>
+                    <div onmouseover="current_icon2()"class="w3-btn w3-animate-top" style="flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"> <a href="pages/Events/Event 1.html"><i class="fixbox far fa-calendar-alt "></a></i></div>
+                    <div onmouseover="current_icon3()"class="w3-btn w3-animate-bottom" style="flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><a href="pages/Events/Event 1.html"><i class="fixbox far fa-calendar-alt "></a></i></div>
+                    <div onmouseover="current_icon4()"class="w3-btn w3-animate-right" style="margin-right:3vw;flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><a href="pages/Events/Event 1.html"><i class="fixbox far fa-calendar-alt "></a></i></div>
                     </div>
+                    <div class="logo_text_containers">
+                    <div><i class="text-white">EVENTS</i></div>
+                    <div><i class="text-white">WORKSHOPS</i></div>
+                    <div><i class="text-white">GALLERY</i></div>
+                    <div><i class="text-white">EVENTS</i></div>
+                    </div>
+                    
                         <i class="w3-bottom w3-text-white"> Developed by ...</i>
+                        
+                           
+                         
         </div>              
     </body>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/6dbb42599d.js" crossorigin="anonymous"></script>
+    <script src="js/TimelineMaxmin.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/particle_anim.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/utils/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
+
     <script>
+
+        var StartX , StartY ;
+        var angleDeg;
+        var tl = new TimelineMax();
+        
+        Draggable.create("#dragger", {
+
+        onDrag:function(){ 
+            StartX=this.x;
+            StartY=this.y;
+            angleDeg = Math.atan2(StartY,StartX) * 180 / Math.PI;
+        
+        },
+        onRelease:function(){
+
+            tl.to("#dragger", 1.5, { x:0,y: -150,rotation:-angleDeg,ease: Back.easeOut.config(1.7)});
+            tl.to("#dragger", 2, { x:0,y:-100,rotation:320,ease: Back.easeOut.config(1.7)});
+            tl.to("#dragger", 1.0, { x:0,y:0,ease: Sine.easeOut});
+        }
+        });
+          </script>
+
+    <script>
+        
         var myvar;
+        var myvar1;
         function welcome_msg()
         {
             
             var text=document.getElementById("message").innerHTML = "RISE HIGH";
-            myVar = setTimeout(next,2000);
+            myVar = setTimeout(next,1000);
             function next(){ //optimal about 3500
             var text=document.getElementById("message").innerHTML = "RISE BRIGHT";
-            
+            myVar1 = setTimeout(next1,1000);
+            }
+            function next1(){
+                var text1=document.getElementById("message").innerHTML = "Drag the rocket";
             }
             
         }
@@ -107,11 +198,5 @@
         function current_icon4(){var text=document.getElementById("text_icon").innerHTML = "EVENTS";}
         
     </script>
-    <script src="js/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/6dbb42599d.js" crossorigin="anonymous"></script>
-    <script src="js/TimelineMaxmin.js"></script>
-    <script src="js/TweenMax.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="js/particle_anim.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
 </html>
