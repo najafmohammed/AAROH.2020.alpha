@@ -115,20 +115,22 @@
 .logo_text_containers > div {
   background-color:#261841;
   border-radius: 50px;
-  min-width:70px;
+  min-width:100px;
   max-height:90px;
   justify-content: center;
   align-items: center;
   width: 50px;
   height:auto;
   margin: 10px;
+  display:inline-block;
   text-align: center;
   align-content: center;
-  font-size: 1.5vh;
+  font-size: 1.1vw;
 }
 .logo_text_containers > i {
   display: inline-block;
   height: 100%;
+  overflow-x:wrap;
   width: 100%;
 }
 
