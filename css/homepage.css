@@ -101,7 +101,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px; 
-  width: 20vw;
+  max-width: 500px;
   height: 15vh;
   width: 50%;
   position: absolute;
@@ -115,7 +115,7 @@
 .logo_text_containers > div {
   background-color:#261841;
   border-radius: 50px;
-  min-width:150px;
+  min-width:120px;
   max-height:90px;
   justify-content: center;
   align-items: center;
