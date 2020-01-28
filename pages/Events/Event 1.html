@@ -14,7 +14,11 @@
             height: 100%;
             width: 100%;
             scroll-behavior: smooth;
-            background: black;
+            background-image: url("background_main.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
             
         }
         .parallelogram1 {
@@ -61,23 +65,88 @@
         {
           height: 100%;
           width:100%;
-          background-image: url("background_main.png");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          position: relative;
+          
+        }
+        .info_class{
+            height: 80vh;
+            width: 70vw;
+            overflow-x: auto;
+            overflow-y: scroll;
+            position: absolute;
+            top:20%;
+            left:30%;
         }
     </style>
     <body>
+            <div class="w3-sidebar w3-bar-block w3-animate-right" style="display:none;z-index:5;width:40%;right:0" id="mySidebar">
+                    <button class="w3-bar-item w3-button w3-xlarge" style="right:0" onclick="w3_close()">Close &times;</button>
+                    <a href="pages/Events/Event 1.html" class="w3-bar-item w3-button w3-xlarge w3-animate-zoom">EVENTS</a>
+                    <a href="#workshop" class="w3-bar-item w3-button w3-xlarge w3-animate-zoom">WORKSHOP</a>
+                    <a href="#gallery" class="w3-bar-item w3-button w3-xlarge w3-animate-zoom">GALLERY</a>
+                    <a href="#contact" class="w3-bar-item w3-button w3-xlarge w3-animate-zoom">CONTACT</a>
+                
+                  </div>
+                  
+                  <!-- Page Content -->
+                  <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+                  
+                  
+                    <button id="buttonf" class="w3-button w3-text-aqua w3-xxlarge" onclick="w3_open()" style="background-color:transparent;z-index:10;position:fixed;right:0">&#9776;</button>
+                    
             <div id="particles-js" class="custom">
-        <h1 style="float: right;" class="w3-text-white">EVENTS</h1>
-            <div class="btn btn-primary w3-purple  parallelogram1 w3-animate-left" style="display: flex"><i class="w3-display-right" style="font-size: 2.7vh;margin-right:4vw">EVENT NAME</i></div>
-            <div class="btn btn-primary w3-purple  parallelogram2 w3-animate-left" style="display: flex"><i class="w3-display-right" style="font-size: 2.7vh;margin-right:4vw">Registration</i></div>
-            <div class="btn btn-primary w3-purple  parallelogram3 w3-animate-left" style="display: flex"><i class="w3-display-right" style="font-size: 2.7vh;margin-right:3vw">Contact</i></div>
-            <div class="btn btn-primary w3-purple  parallelogram4 w3-animate-left" style="display: flex;"><i class="w3-display-right" style="font-size: 2.7vh;margin-right:3vw">Rules</i></div>
+        <h1 style="position: relative;float:right;top:10%" class="w3-text-white">EVENTS</h1>
+            <div onclick="reveal_img()" class="btn btn-dark   parallelogram1 w3-animate-left" style="display: flex"><i class="w3-display-right" style="font-size: 2.7vh;margin-right:4vw">EVENT NAME</i></div>
+            <div onclick="reveal_registration()" class="btn btn-dark   parallelogram2 w3-animate-left" style="display: flex"><i class="w3-display-right" style="font-size: 2.7vh;margin-right:4vw">Registration</i></div>
+            <div onclick="reveal_contact()" class="btn btn-dark   parallelogram3 w3-animate-left" style="display: flex"><i class="w3-display-right" style="font-size: 2.7vh;margin-right:3vw">Contact</i></div>
+            <div onclick="reveal_rules()" class="btn btn-dark   parallelogram4 w3-animate-left" style="display: flex;"><i class="w3-display-right" style="font-size: 2.7vh;margin-right:3vw">Rules</i></div>
+           </div>
+
+           <div  id="main_content" class="info_class .bg-secondary w3-text-white">
+               
+               <h1>     EVENT NAME</h1>
+                    <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </p>
+
            </div>
     </body>
     <script src="particle_anim1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+            function w3_open() {
+              document.getElementById("mySidebar").style.display = "block";
+              document.getElementById("myOverlay").style.display = "block";
+              document.getElementById("buttonf").style.display = "none";
+            }
+            
+            function w3_close() {
+              document.getElementById("mySidebar").style.display = "none";
+              document.getElementById("myOverlay").style.display = "none";
+              document.getElementById("buttonf").style.display = "block";
+            }
+            </script>
+
+    <script>
+        
+        function reveal_img()
+        {
+            var content=document.getElementById("main_content").innerHTML="IMAGE NEEDED and more visual animated elements ";
+        }
+        function reveal_registration()
+        {
+            var content=document.getElementById("main_content").innerHTML="registration page under construction";
+        }
+        function reveal_rules()
+        {
+            var content=document.getElementById("main_content").innerHTML="Rules of the event";
+        }
+        function reveal_contact()
+        {
+            var content=document.getElementById("main_content").innerHTML="Contacts for the event";
+        }
+    </script>
     
 </html>

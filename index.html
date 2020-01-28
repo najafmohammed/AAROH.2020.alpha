@@ -110,6 +110,21 @@
     </style>
     </head>
     <body onload="welcome_msg()">
+        <div class="w3-sidebar w3-bar-block w3-animate-right" style="display:none;z-index:5;width:40%;right:0" id="mySidebar">
+            <button class="w3-bar-item w3-button w3-xlarge" style="right:0" onclick="w3_close()">Close &times;</button>
+            <a href="pages/Events/Event 1.html" class="w3-bar-item w3-button w3-xlarge w3-animate-zoom">EVENTS</a>
+            <a href="#workshop" class="w3-bar-item w3-button w3-xlarge w3-animate-zoom">WORKSHOP</a>
+            <a href="#gallery" class="w3-bar-item w3-button w3-xlarge w3-animate-zoom">GALLERY</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-xlarge w3-animate-zoom">CONTACT</a>
+        
+          </div>
+          
+          <!-- Page Content -->
+          <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+          
+          
+            <button id="buttonf" class="w3-button w3-text-aqua w3-xxlarge" onclick="w3_open()" style="background-color:transparent;z-index:10;position:fixed;right:0">&#9776;</button>
+            
             <div class="ring_logo"><img class="world" src="ring_logo.png" alt="image"></div>
             <div id="dragger" class="dragger"><img id="rocket" src="test rocket.png" alt="image"></div>
         <div id="particles-js" class="custom"> 
@@ -148,7 +163,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
-
+    <script>
+        function w3_open() {
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("myOverlay").style.display = "block";
+          document.getElementById("buttonf").style.display = "none";
+        }
+        
+        function w3_close() {
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("myOverlay").style.display = "none";
+          document.getElementById("buttonf").style.display = "block";
+        }
+        </script>
     <script>
 
         var StartX , StartY ;
