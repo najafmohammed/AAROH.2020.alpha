@@ -115,7 +115,7 @@
 .logo_text_containers > div {
   background-color:#261841;
   border-radius: 50px;
-  min-width:120px;
+  min-width:70px;
   max-height:90px;
   justify-content: center;
   align-items: center;
