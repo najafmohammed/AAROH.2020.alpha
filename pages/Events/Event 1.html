@@ -74,12 +74,29 @@
             overflow-y: scroll;
             position: absolute;
             top:20%;
-            left:30%;
+            left:35%;
         }
+.sidenav {
+  width: 20vw;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
     </style>
     <body>
             <div class="w3-sidebar w3-bar-block w3-animate-right" style="display:none;z-index:5;width:40%;right:0" id="mySidebar">
                     <button class="w3-bar-item w3-button w3-xlarge" style="right:0" onclick="w3_close()">Close &times;</button>
+                    <a href="../../index.html" class="w3-bar-item w3-button w3-xlarge w3-animate-zoom">HOME</a>
                     <a href="pages/Events/Event 1.html" class="w3-bar-item w3-button w3-xlarge w3-animate-zoom">EVENTS</a>
                     <a href="#workshop" class="w3-bar-item w3-button w3-xlarge w3-animate-zoom">WORKSHOP</a>
                     <a href="#gallery" class="w3-bar-item w3-button w3-xlarge w3-animate-zoom">GALLERY</a>
@@ -94,27 +111,321 @@
                     <button id="buttonf" class="w3-button w3-text-aqua w3-xxlarge" onclick="w3_open()" style="background-color:transparent;z-index:10;position:fixed;right:0">&#9776;</button>
                     
             <div id="particles-js" class="custom">
-        <h1 style="position: relative;float:right;top:10%" class="w3-text-white">EVENTS</h1>
-            <div onclick="reveal_img()" class="btn btn-dark   parallelogram1 w3-animate-left" style="display: flex"><i class="w3-display-right" style="font-size: 2.7vh;margin-right:4vw">EVENT NAME</i></div>
-            <div onclick="reveal_registration()" class="btn btn-dark   parallelogram2 w3-animate-left" style="display: flex"><i class="w3-display-right" style="font-size: 2.7vh;margin-right:4vw">Registration</i></div>
-            <div onclick="reveal_contact()" class="btn btn-dark   parallelogram3 w3-animate-left" style="display: flex"><i class="w3-display-right" style="font-size: 2.7vh;margin-right:3vw">Contact</i></div>
-            <div onclick="reveal_rules()" class="btn btn-dark   parallelogram4 w3-animate-left" style="display: flex;"><i class="w3-display-right" style="font-size: 2.7vh;margin-right:3vw">Rules</i></div>
+        <h1 style="position: absolute;left:50%;top:0%" class="w3-text-white">EVENTS</h1>
+        <div class="sidenav" style="background:transparent;min-width:150px;">
+            
+           <div onclick=computer_reveal()  class="w3-border w3-border-purple text-white" style="background:transparent;">
+                
+                <svg class="card-img-top"  height="100px">
+                        <use href="#Layer_1"  x="0" y="0"/>
+                      </svg> 
+                <h4 class="card-title w3-center" style="background: transparent;">COMPUTER</h4>
+            </div><br>
+            <div onclick=electrical_reveal() class="card bg-dark">
+                    <img class="card-img-top" src="background_main.png" height="100px alt="Card image"> 
+                    <h4 class="card-title w3-center" style="background: transparent;">ELECTRICAL</h4>
+                </div><br>
+            <div onclick="electronics_reveal()" class="card bg-dark">
+                <img class="card-img-top" src="background_main.png" height="100px alt="Card image"> 
+                <h4 class="card-title w3-center" style="background: transparent;">ELECTRONICS</h4>
+            </div></<div><br>
+            <div onclick="mechanical_reveal()" class="card bg-dark">
+                <img class="card-img-top" src="background_main.png" height="100px alt="Card image"> 
+                <h4 class="card-title w3-center" style="background: transparent;">MECHANICAL</h4>
+            </div></<div> <br>
+          </div>
+            </div>
+
+           <div  id="Main_content" class="info_class .bg-secondary w3-text-white" style="display: block;">
+            <container id="computer_events" style="display: none">
+                <div class="card-deck">
+                        <div class="card bg-primary">
+                          <div class="card-body text-center">
+                            <p class="card-text">Some text inside the first card</p>
+                            <p class="card-text">Some text inside the first card</p>
+                            <p class="card-text">Some text inside the first card</p>
+                            <p class="card-text">Some text inside the first card</p>
+                          </div>
+                        </div>
+                        <div class="card bg-primary">
+                          <div class="card-body text-center">
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                          </div>
+                        </div>
+                </div><br>
+                <div class="card-deck">
+                        <div class="card bg-primary">
+                          <div class="card-body text-center">
+                            <p class="card-text">Some text inside the first card</p>
+                            <p class="card-text">Some text inside the first card</p>
+                            <p class="card-text">Some text inside the first card</p>
+                            <p class="card-text">Some text inside the first card</p>
+                          </div>
+                        </div>
+                        <div class="card bg-primary">
+                          <div class="card-body text-center">
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                          </div>
+                        </div>
+                </div><br>
+                <div class="card-deck">
+                        <div class="card bg-primary">
+                          <div class="card-body text-center">
+                            <p class="card-text">Some text inside the first card</p>
+                            <p class="card-text">Some text inside the first card</p>
+                            <p class="card-text">Some text inside the first card</p>
+                            <p class="card-text">Some text inside the first card</p>
+                          </div>
+                        </div>
+                        <div class="card bg-primary">
+                          <div class="card-body text-center">
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                          </div>
+                        </div>
+                </div>        
+            </container>
+            <container id="electrical_events" style="display: none">
+                    <div class="card-deck">
+                            <div class="card bg-danger">
+                              <div class="card-body text-center">
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                              </div>
+                            </div>
+                            <div class="card bg-danger">
+                              <div class="card-body text-center">
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                              </div>
+                            </div>
+                    </div><br>
+                    <div class="card-deck">
+                            <div class="card bg-danger">
+                              <div class="card-body text-center">
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                              </div>
+                            </div>
+                            <div class="card bg-danger">
+                              <div class="card-body text-center">
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                              </div>
+                            </div>
+                    </div><br>
+                    <div class="card-deck">
+                            <div class="card bg-danger">
+                              <div class="card-body text-center">
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                              </div>
+                            </div>
+                            <div class="card bg-danger">
+                              <div class="card-body text-center">
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                              </div>
+                            </div>
+                    </div>        
+                </container>
+                <container id="electronics_events" style="display: none">
+                        <div class="card-deck">
+                                <div class="card bg-warning">
+                                  <div class="card-body text-center">
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                  </div>
+                                </div>
+                                <div class="card bg-warning">
+                                  <div class="card-body text-center">
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                  </div>
+                                </div>
+                        </div> <br>
+                        <div class="card-deck">
+                                <div class="card bg-warning">
+                                  <div class="card-body text-center">
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                  </div>
+                                </div>
+                                <div class="card bg-warning">
+                                  <div class="card-body text-center">
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                  </div>
+                                </div>
+                        </div><br>
+                        <div class="card-deck">
+                                <div class="card bg-warning">
+                                  <div class="card-body text-center">
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                  </div>
+                                </div>
+                                <div class="card bg-warning">
+                                  <div class="card-body text-center">
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                  </div>
+                                </div>
+                        </div>        
+                    </container>
+                    <container id="mechanical_events" style="display: none" >
+                            <div class="card-deck">
+                                    <div class="card bg-secondary">
+                                      <div class="card-body text-center">
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                      </div>
+                                    </div>
+                                    <div class="card bg-secondary">
+                                      <div class="card-body text-center">
+                                            <p class="card-text">Some text inside the first card</p>
+                                            <p class="card-text">Some text inside the first card</p>
+                                            <p class="card-text">Some text inside the first card</p>
+                                            <p class="card-text">Some text inside the first card</p>
+                                      </div>
+                                    </div>
+                            </div><br>
+                            <div class="card-deck">
+                                    <div class="card bg-secondary">
+                                      <div class="card-body text-center">
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                      </div>
+                                    </div>
+                                    <div class="card bg-secondary">
+                                      <div class="card-body text-center">
+                                            <p class="card-text">Some text inside the first card</p>
+                                            <p class="card-text">Some text inside the first card</p>
+                                            <p class="card-text">Some text inside the first card</p>
+                                            <p class="card-text">Some text inside the first card</p>
+                                      </div>
+                                    </div>
+                            </div><br>
+                            <div class="card-deck">
+                                    <div class="card bg-secondary">
+                                      <div class="card-body text-center">
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                      </div>
+                                    </div>
+                                    <div class="card bg-secondary">
+                                      <div class="card-body text-center">
+                                            <p class="card-text">Some text inside the first card</p>
+                                            <p class="card-text">Some text inside the first card</p>
+                                            <p class="card-text">Some text inside the first card</p>
+                                            <p class="card-text">Some text inside the first card</p>
+                                      </div>
+                                    </div>
+                            </div>        
+                        </container>
            </div>
 
-           <div  id="main_content" class="info_class .bg-secondary w3-text-white">
-               
-               <h1>     EVENT NAME</h1>
-                    <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </p>
-
-           </div>
+           <div style="display: none;">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height=100px  x="0px" y="0px"
+                viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+             <g>
+               <path style="fill:#E8EDEE;" d="M361.931,494.345H150.069c0-19.5,15.81-35.31,35.31-35.31h141.241C346.121,459.034,361.931,474.845,361.931,494.345"/>
+               <polygon style="fill:#B0B6BB;" points="317.793,459.034 194.207,459.034 211.862,388.414 300.138,388.414 	"/>
+               <path id="screen"style="fill:#38454F;" d="M512,317.793H0V48.552c0-17.064,13.833-30.897,30.897-30.897h450.207c17.064,0,30.897,13.833,30.897,30.897V317.793z"/>
+               <path  style="fill:#E8EDEE;" d="M481.103,388.414H30.897C13.833,388.414,0,374.581,0,357.517v-39.724h512v39.724C512,374.581,498.167,388.414,481.103,388.414"/>
+               <g>
+                 <path id=codeline53 style="fill:#EA6148;" d="M432.552,282.483H300.138c-4.882,0-8.828-3.955-8.828-8.828c0-4.873,3.946-8.828,8.828-8.828h132.414c4.882,0,8.828,3.955,8.828,8.828C441.379,278.528,437.433,282.483,432.552,282.483"/>
+                 <path id=codeline41 style="fill:#EA6148;" d="M167.724,229.517H79.448c-4.882,0-8.828-3.955-8.828-8.828c0-4.873,3.946-8.828,8.828-8.828h88.276c4.882,0,8.828,3.955,8.828,8.828C176.552,225.562,172.606,229.517,167.724,229.517"/>
+                 <path id=codeline43 style="fill:#EA6148;" d="M388.414,229.517H256c-4.882,0-8.828-3.955-8.828-8.828c0-4.873,3.946-8.828,8.828-8.828h132.414c4.882,0,8.828,3.955,8.828,8.828C397.241,225.562,393.295,229.517,388.414,229.517"/>
+                 <path id=codeline42  style="fill:#EA6148;" d="M211.862,229.517c-1.148,0-2.295-0.265-3.354-0.706c-1.148-0.441-2.03-1.059-2.913-1.854c-1.598-1.677-2.56-3.884-2.56-6.268s0.962-4.59,2.56-6.268c0.883-0.794,1.766-1.412,2.913-1.854c3.169-1.324,7.15-0.618,9.622,1.854c1.589,1.677,2.56,3.972,2.56,6.268c0,2.295-0.971,4.59-2.56,6.268C216.452,228.546,214.157,229.517,211.862,229.517"/>
+                 <path id=codeline52  style="fill:#EA6148;" d="M256,282.483H123.586c-4.882,0-8.828-3.955-8.828-8.828c0-4.873,3.946-8.828,8.828-8.828H256c4.882,0,8.828,3.955,8.828,8.828C264.828,278.528,260.882,282.483,256,282.483"/>
+                 <path id=codeline51  style="fill:#EA6148;" d="M79.448,282.483c-1.148,0-2.295-0.265-3.354-0.706c-1.059-0.441-2.03-1.059-2.913-1.854c-1.598-1.677-2.56-3.884-2.56-6.268c0-1.148,0.265-2.295,0.706-3.354c0.441-1.148,1.059-2.03,1.854-2.913c2.119-2.03,5.12-2.913,7.936-2.383c0.627,0.088,1.148,0.265,1.686,0.53c0.521,0.177,1.059,0.441,1.501,0.794c0.521,0.353,0.971,0.706,1.412,1.059c0.794,0.883,1.412,1.766,1.854,2.913c0.441,1.059,0.706,2.207,0.706,3.354c0,2.383-0.971,4.59-2.56,6.268c-0.441,0.353-0.892,0.706-1.412,1.059c-0.441,0.353-0.98,0.618-1.501,0.794c-0.538,0.265-1.059,0.441-1.686,0.53C80.596,282.394,79.978,282.483,79.448,282.483"/>
+                 <path id=codeline44  style="fill:#EA6148;" d="M432.552,229.517c-0.538,0-1.148-0.088-1.677-0.177c-0.618-0.088-1.148-0.265-1.677-0.53c-0.53-0.177-1.059-0.441-1.598-0.794c-0.433-0.353-0.874-0.706-1.315-1.059c-1.598-1.677-2.56-3.972-2.56-6.268c0-2.295,0.962-4.59,2.56-6.268l1.315-1.059c0.539-0.353,1.068-0.618,1.598-0.794c0.53-0.265,1.059-0.441,1.677-0.53c2.825-0.618,5.906,0.353,7.945,2.383c0.353,0.441,0.706,0.883,1.059,1.412c0.353,0.441,0.609,0.971,0.794,1.501c0.265,0.53,0.441,1.059,0.521,1.677c0.097,0.53,0.185,1.148,0.185,1.677s-0.088,1.148-0.185,1.766c-0.079,0.53-0.256,1.059-0.521,1.589c-0.185,0.53-0.441,1.059-0.794,1.589c-0.353,0.441-0.706,0.883-1.059,1.324c-0.441,0.353-0.892,0.706-1.324,1.059c-0.53,0.353-1.068,0.618-1.589,0.794c-0.538,0.265-1.059,0.441-1.686,0.53C433.699,229.429,433.081,229.517,432.552,229.517"/>
+                 <path id=codeline22  style="fill:#EA6148;" d="M432.552,123.586H300.138c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h132.414c4.882,0,8.828,3.955,8.828,8.828S437.433,123.586,432.552,123.586"/>
+                 <path id=codeline33 style="fill:#EA6148;" d="M432.552,176.552h-88.276c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h88.276c4.882,0,8.828,3.955,8.828,8.828S437.433,176.552,432.552,176.552"/>
+                 <path id=codeline31 style="fill:#EA6148;" d="M273.655,176.552H256c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h17.655c4.882,0,8.828,3.955,8.828,8.828S278.537,176.552,273.655,176.552"/>
+                 <path id=codeline1 style="fill:#EA6148;" d="M388.414,70.621H256c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h132.414c4.882,0,8.828,3.955,8.828,8.828S393.295,70.621,388.414,70.621"/>
+                 <path id=codeline1dot style="fill:#EA6148;" d="M432.552,70.621c-0.538,0-1.148-0.088-1.677-0.177c-0.618-0.088-1.148-0.265-1.677-0.53c-0.53-0.177-1.059-0.441-1.598-0.794c-0.433-0.353-0.874-0.706-1.315-1.059c-1.598-1.677-2.56-3.972-2.56-6.268c0-2.295,0.962-4.59,2.56-6.268l1.315-1.059c0.539-0.353,1.068-0.618,1.598-0.794c0.53-0.265,1.059-0.441,1.677-0.53c2.825-0.618,5.906,0.353,7.945,2.383c0.353,0.441,0.706,0.883,1.059,1.412c0.353,0.441,0.609,0.971,0.794,1.501c0.265,0.53,0.441,1.059,0.521,1.677c0.097,0.53,0.185,1.148,0.185,1.677s-0.088,1.148-0.185,1.766c-0.079,0.53-0.256,1.059-0.521,1.589c-0.185,0.53-0.441,1.059-0.794,1.589c-0.353,0.441-0.706,0.883-1.059,1.324c-0.441,0.353-0.892,0.706-1.324,1.059c-0.53,0.353-1.068,0.618-1.589,0.794c-0.538,0.265-1.059,0.441-1.686,0.53C433.699,70.532,433.081,70.621,432.552,70.621"/>
+                 <path id=codeline2dot style="fill:#EA6148;" d="M264.828,123.586c-2.295,0-4.599-0.971-6.268-2.56c-0.794-0.883-1.412-1.854-1.854-2.913S256,115.906,256,114.759c0-1.148,0.265-2.295,0.706-3.354s1.059-2.03,1.854-2.913c2.03-2.03,5.12-2.913,7.936-2.383c0.627,0.088,1.148,0.265,1.686,0.53c0.521,0.177,1.059,0.441,1.501,0.794c0.521,0.353,0.971,0.706,1.324,1.059c0.883,0.883,1.501,1.854,1.942,2.913s0.706,2.207,0.706,3.354c0,1.148-0.265,2.295-0.706,3.354s-1.059,2.03-1.942,2.913c-0.353,0.353-0.803,0.706-1.324,1.059c-0.441,0.353-0.98,0.618-1.501,0.794c-0.538,0.265-1.059,0.441-1.686,0.53C265.975,123.498,265.357,123.586,264.828,123.586"/>
+                 <path id=codeline32 style="fill:#EA6148;" d="M308.966,176.552c-2.392,0-4.599-0.971-6.268-2.56c-1.598-1.677-2.56-3.972-2.56-6.268c0-2.295,0.962-4.59,2.56-6.268c3.266-3.266,9.269-3.266,12.535,0c1.589,1.677,2.56,3.972,2.56,6.268c0,0.618-0.088,1.148-0.185,1.766c-0.079,0.53-0.256,1.059-0.521,1.589c-0.185,0.53-0.441,1.059-0.794,1.589c-0.353,0.441-0.706,0.883-1.059,1.324C313.556,175.581,311.349,176.552,308.966,176.552"/>
+               </g>
+               <polygon id=yellowbox style="fill:#ECBA16;" points="79.448,176.552 203.034,176.552 203.034,52.966 79.448,52.966 	"/>
+             </g>
+             </svg></div>
     </body>
     <script src="particle_anim1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="../../js/TimelineMax.min.js"></script>
+    <script src="../../js/TweenMax.min.js"></script>
+    <script>
+        
+var tl = new TimelineMax({repeat:3});
+
+tl.from('#screen', 1.5, {scaleY: 0, transformOrigin: "center", ease: "easeOut"})
+
+
+tl.from('#codeline1', .3, {scaleX: 0, transformOrigin: "left", ease: "expo.out"})
+.from('#codeline2dot', .3, {scaleX: 0, transformOrigin: "left", ease: "expo.out"})
+.from('#codeline31', .3, {scaleX: 0, transformOrigin: "left", ease: "expo.out"})
+
+
+
+tl.from('#codeline1dot', .3, {scaleX: 0, transformOrigin: "left", ease: "expo.out"})
+.from('#codeline22', .3, {scaleX: 0, transformOrigin: "left", ease: "expo.out"})
+.from('#codeline32', .3, {scaleX: 0, transformOrigin: "left", ease: "expo.out"})
+.from('#codeline33', .3, {scaleX: 0, transformOrigin: "left", ease: "expo.out"})
+
+tl.from('#yellowbox', .3, {scaleX: 0, transformOrigin: "left", ease: "expo.out"})
+
+tl.from('#codeline41', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"})
+.from('#codeline42', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"})
+.from('#codeline51', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"})
+.from('#codeline52', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"})
+
+
+tl.from('#codeline43', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"})
+.from('#codeline44', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"})
+.from('#codeline53', 1.5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"})
+    </script>
+   
     <script>
             function w3_open() {
               document.getElementById("mySidebar").style.display = "block";
@@ -131,22 +442,138 @@
 
     <script>
         
-        function reveal_img()
+        function computer_reveal()
         {
-            var content=document.getElementById("main_content").innerHTML="IMAGE NEEDED and more visual animated elements ";
+            var content=document.getElementById("computer_events").style.display="block";
+            var content2=document.getElementById("electrical_events").style.display="none";
+            var content3=document.getElementById("electronics_events").style.display="none";
+            var content4=document.getElementById("mechanical_events").style.display="none";
         }
-        function reveal_registration()
+        function electrical_reveal()
         {
-            var content=document.getElementById("main_content").innerHTML="registration page under construction";
+            var content=document.getElementById("computer_events").style.display="none";
+            var content2=document.getElementById("electrical_events").style.display="block";
+            var content3=document.getElementById("electronics_events").style.display="none";
+            var content4=document.getElementById("mechanical_events").style.display="none";
         }
-        function reveal_rules()
+        function electronics_reveal()
         {
-            var content=document.getElementById("main_content").innerHTML="Rules of the event";
+            var content=document.getElementById("computer_events").style.display="none";
+            var content2=document.getElementById("electrical_events").style.display="none";
+            var content3=document.getElementById("electronics_events").style.display="block";
+            var content4=document.getElementById("mechanical_events").style.display="none";
         }
-        function reveal_contact()
+        function mechanical_reveal()
         {
-            var content=document.getElementById("main_content").innerHTML="Contacts for the event";
+            var content=document.getElementById("computer_events").style.display="none";
+            var content2=document.getElementById("electrical_events").style.display="none";
+            var content3=document.getElementById("electronics_events").style.display="none";
+            var content4=document.getElementById("mechanical_events").style.display="block";
         }
     </script>
+     <script>
+            const particlesJSON = {
+          "particles": {
+              "number": {
+                  "value": 50,
+                  "density": {
+                      "enable": true,
+                      "value_area": 350
+                  }
+              },
+              "color": {
+                  "value": "#610cfd"
+              },
+              "shape": {
+                  "type": "circle",
+                  "stroke": {
+                      "width": .1,
+                      "color": "#610cfd"
+                  },
+                  "polygon": {
+                      "nb_sides": 3
+                  },
+                  "image": {
+                      "src": "img/github.svg",
+                      "width": 300,
+                      "height": 300
+                  }
+              },
+              "opacity": {
+                  "value": 0.5,
+                  "random": true
+              },
+              "size": {
+                  "value": 3,
+                  "random": false
+              },
+              "line_linked": {
+                  "enable": true,
+                  "distance": 200,
+                  "color": "#000000",
+                  "opacity": 0.3,
+                  "width": 2
+              },
+              "move": {
+                  "enable": true,
+                  "speed": 5,
+                  "direction": "bottom",
+                  "random": true,
+                  "straight": false,
+                  "out_mode": "out",
+                  "bounce": true,
+                  "attract": {
+                      "enable": false,
+                      "rotateX": 600,
+                      "rotateY": 1200
+                  }
+              }
+          },
+          "interactivity": {
+              "detect_on": "canvas",
+              "events": {
+                  "onhover": {
+                      "enable": true,
+                      "mode": [
+                          "bubble"
+                      ]
+                  },
+                  "onclick": {
+                      "enable": true,
+                      "mode": "repulse"
+                  },
+                  "resize": true
+              },
+              "modes": {
+                  "grab": {
+                      "distance": 400,
+                      "line_linked": {
+                          "opacity": 0.7
+                      }
+                  },
+                  "bubble": {
+                      "distance": 200,
+                      "size": 3,
+                      "duration": 1,
+                      "opacity": 0.8,
+                      "speed": 1
+                  },
+                  "repulse": {
+                      "distance": 400,
+                      "duration": 0.4
+                  },
+                  "push": {
+                      "particles_nb": 20
+                  },
+                  "remove": {
+                      "particles_nb": 10
+                  }
+              }
+          },
+          "retina_detect": true
+        }
+        
+        particlesJS("particles-js", particlesJSON)
+            </script>
     
 </html>
