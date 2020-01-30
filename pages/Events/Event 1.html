@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <style>
@@ -29,23 +30,24 @@
           
         }
         .info_class{
-            height: 80vh;
-            width: 55vw;
+            height: 70%;
+            width: 100%;
             overflow-x: auto;
             overflow-y: scroll;
             position: absolute;
-            top:20%;
+            top:30%;
             right:1%;
         }
 .sidenav {
   width: 20vw;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   top: 60px;
   left: 10px;
   overflow-x: hidden;
   padding: 8px 0;
 }
+
 
 
 @media screen and (max-height: 450px) {
@@ -72,9 +74,10 @@
                     <button id="buttonf" class="w3-button w3-text-aqua w3-xxlarge" onclick="w3_open()" style="background-color:transparent;z-index:10;position:fixed;right:0">&#9776;</button>
                     
             <div id="particles-js" class="custom">
+
         <h1 style="position: absolute;left:50%;top:0%" class="w3-text-white">EVENTS</h1>
         
-        <div class="sidenav" style="background:transparent;min-width:160px;">
+        <div id="dep_tab" class="sidenav w3-animate-opacity" style="background:transparent;min-width:400px;">
             
            <div onclick=computer_reveal()  class="w3-border w3-border-purple text-white" style="background:transparent;">
                 <svg class="card-img-top"  height="100px">
@@ -99,10 +102,10 @@
             </div>
 
            <div  id="Main_content" class="info_class .bg-secondary w3-text-white" style="display: block;">
-            <container id="computer_events" style="display: none">
+            <container id="computer_events" style="display: none;padding:1px;">
                 <div class="card-deck">
                         <div class="card bg-primary">
-                          <div class="card-body text-center">
+                          <div id="cs_dep_1" class="card-body text-center" style="background-image: url('background_main.png');">
                             <p class="card-text">Some text inside the first card</p>
                             <p class="card-text">Some text inside the first card</p>
                             <p class="card-text">Some text inside the first card</p>
@@ -110,7 +113,7 @@
                           </div>
                         </div>
                         <div class="card bg-primary">
-                          <div class="card-body text-center">
+                          <div id="cs_dep_2" class="card-body text-center">
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
@@ -120,7 +123,7 @@
                 </div><br>
                 <div class="card-deck">
                         <div class="card bg-primary">
-                          <div class="card-body text-center">
+                          <div id="cs_dep_3"class="card-body text-center">
                             <p class="card-text">Some text inside the first card</p>
                             <p class="card-text">Some text inside the first card</p>
                             <p class="card-text">Some text inside the first card</p>
@@ -128,7 +131,7 @@
                           </div>
                         </div>
                         <div class="card bg-primary">
-                          <div class="card-body text-center">
+                          <div id="cs_dep_4" class="card-body text-center">
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
@@ -138,7 +141,7 @@
                 </div><br>
                 <div class="card-deck">
                         <div class="card bg-primary">
-                          <div class="card-body text-center">
+                          <div id="cs_dep_5" class="card-body text-center">
                             <p class="card-text">Some text inside the first card</p>
                             <p class="card-text">Some text inside the first card</p>
                             <p class="card-text">Some text inside the first card</p>
@@ -146,7 +149,7 @@
                           </div>
                         </div>
                         <div class="card bg-primary">
-                          <div class="card-body text-center">
+                          <div id="cs_dep_6" class="card-body text-center">
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
@@ -357,7 +360,14 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="../../js/TimelineMax.min.js"></script>
     <script src="../../js/TweenMax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+  <script>
   
+  </script>
+
     <script>
         
 var tl = new TimelineMax({repeat:3});
@@ -407,6 +417,15 @@ tl.from('#codeline43', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"
         
         function computer_reveal()
         {
+          var tl = new TimelineMax();
+  tl.from('#cs_dep_1', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+  .from('#cs_dep_2', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+  .from('#cs_dep_3', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+  .from('#cs_dep_4', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+  .from('#cs_dep_5', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+  .from('#cs_dep_6', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+            var content=document.getElementById("dep_tab").style.minWidth="100%";
+            var content=document.getElementById("dep_tab").style.display="flex";
             var content=document.getElementById("computer_events").style.display="block";
             var content2=document.getElementById("electrical_events").style.display="none";
             var content3=document.getElementById("electronics_events").style.display="none";
