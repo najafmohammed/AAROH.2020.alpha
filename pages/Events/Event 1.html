@@ -84,19 +84,19 @@
                         <use  href="#Layer_1"  x="0" y="0"/>
 
                       </svg> 
-                <h4 class="card-title w3-center btn-dark">COMPUTER</h4>
+                <h6 class="card-title w3-center btn-dark">COMPUTER</h6>
             </div><br>
             <div onclick=electrical_reveal() class="card bg-dark">
                     <img class="card-img-top" src="background_main.png" height="100px" alt="Card image"> 
-                    <h4 class="card-title w3-center" style="background: transparent;">ELECTRICAL</h4>
+                    <h6 class="card-title text-sm w3-center" style="background: transparent;">ELECTRICAL</h6>
                 </div><br>
             <div onclick="electronics_reveal()" class="card bg-dark">
                 <img class="card-img-top" src="background_main.png" height="100px" alt="Card image"> 
-                <h4 class="card-title w3-center" style="background: transparent;">ELECTRONICS</h4>
+                <h6 class="card-title w3-center" style="background: transparent;">ELECTRONICS</h6>
             </div></<div><br>
             <div onclick="mechanical_reveal()" class="card bg-dark">
                 <img class="card-img-top" src="background_main.png" height="100px" alt="Card image"> 
-                <h4 class="card-title w3-center" style="background: transparent;">MECHANICAL</h4>
+                <h6 class="card-title w3-center" style="background: transparent;">MECHANICAL</h6>
             </div></<div> <br>
           </div>
             </div>
@@ -104,34 +104,16 @@
            <div  id="Main_content" class="info_class .bg-secondary w3-text-white" style="display: block;">
             <container id="computer_events" style="display: none;padding:1px;">
                 <div class="card-deck">
-                        <div class="card bg-primary">
-                          <div id="cs_dep_1" class="card-body text-center" style="background-image: url('background_main.png');">
+                        <div id="cs_dep_1" class="card bg-primary">
+                          <div  class="card-body text-center" style="background-image: url('background_main.png');">
                             <p class="card-text">Some text inside the first card</p>
                             <p class="card-text">Some text inside the first card</p>
                             <p class="card-text">Some text inside the first card</p>
                             <p class="card-text">Some text inside the first card</p>
                           </div>
                         </div>
-                        <div class="card bg-primary">
-                          <div id="cs_dep_2" class="card-body text-center">
-                                <p class="card-text">Some text inside the first card</p>
-                                <p class="card-text">Some text inside the first card</p>
-                                <p class="card-text">Some text inside the first card</p>
-                                <p class="card-text">Some text inside the first card</p>
-                          </div>
-                        </div>
-                </div><br>
-                <div class="card-deck">
-                        <div class="card bg-primary">
-                          <div id="cs_dep_3"class="card-body text-center">
-                            <p class="card-text">Some text inside the first card</p>
-                            <p class="card-text">Some text inside the first card</p>
-                            <p class="card-text">Some text inside the first card</p>
-                            <p class="card-text">Some text inside the first card</p>
-                          </div>
-                        </div>
-                        <div class="card bg-primary">
-                          <div id="cs_dep_4" class="card-body text-center">
+                        <div id="cs_dep_2" class="card bg-primary">
+                          <div  class="card-body text-center">
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
@@ -140,16 +122,34 @@
                         </div>
                 </div><br>
                 <div class="card-deck">
-                        <div class="card bg-primary">
-                          <div id="cs_dep_5" class="card-body text-center">
+                        <div id="cs_dep_3" class="card bg-primary">
+                          <div class="card-body text-center">
                             <p class="card-text">Some text inside the first card</p>
                             <p class="card-text">Some text inside the first card</p>
                             <p class="card-text">Some text inside the first card</p>
                             <p class="card-text">Some text inside the first card</p>
                           </div>
                         </div>
-                        <div class="card bg-primary">
-                          <div id="cs_dep_6" class="card-body text-center">
+                        <div id="cs_dep_4" class="card bg-primary">
+                          <div  class="card-body text-center">
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                          </div>
+                        </div>
+                </div><br>
+                <div class="card-deck">
+                        <div id="cs_dep_5" class="card bg-primary">
+                          <div  class="card-body text-center">
+                            <p class="card-text">Some text inside the first card</p>
+                            <p class="card-text">Some text inside the first card</p>
+                            <p class="card-text">Some text inside the first card</p>
+                            <p class="card-text">Some text inside the first card</p>
+                          </div>
+                        </div>
+                        <div id="cs_dep_6"class="card bg-primary">
+                          <div  class="card-body text-center">
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
@@ -160,7 +160,7 @@
             </container>
             <container id="electrical_events" style="display: none">
                     <div class="card-deck">
-                            <div class="card bg-danger">
+                            <div id="electrical_dep_1" class="card bg-danger">
                               <div class="card-body text-center">
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
@@ -168,25 +168,7 @@
                                 <p class="card-text">Some text inside the first card</p>
                               </div>
                             </div>
-                            <div class="card bg-danger">
-                              <div class="card-body text-center">
-                                    <p class="card-text">Some text inside the first card</p>
-                                    <p class="card-text">Some text inside the first card</p>
-                                    <p class="card-text">Some text inside the first card</p>
-                                    <p class="card-text">Some text inside the first card</p>
-                              </div>
-                            </div>
-                    </div><br>
-                    <div class="card-deck">
-                            <div class="card bg-danger">
-                              <div class="card-body text-center">
-                                <p class="card-text">Some text inside the first card</p>
-                                <p class="card-text">Some text inside the first card</p>
-                                <p class="card-text">Some text inside the first card</p>
-                                <p class="card-text">Some text inside the first card</p>
-                              </div>
-                            </div>
-                            <div class="card bg-danger">
+                            <div id="electrical_dep_2" class="card bg-danger">
                               <div class="card-body text-center">
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
@@ -196,7 +178,7 @@
                             </div>
                     </div><br>
                     <div class="card-deck">
-                            <div class="card bg-danger">
+                            <div id="electrical_dep_3" class="card bg-danger">
                               <div class="card-body text-center">
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
@@ -204,7 +186,25 @@
                                 <p class="card-text">Some text inside the first card</p>
                               </div>
                             </div>
-                            <div class="card bg-danger">
+                            <div id="electrical_dep_4" class="card bg-danger">
+                              <div class="card-body text-center">
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                                    <p class="card-text">Some text inside the first card</p>
+                              </div>
+                            </div>
+                    </div><br>
+                    <div class="card-deck">
+                            <div id="electrical_dep_5" class="card bg-danger">
+                              <div class="card-body text-center">
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                                <p class="card-text">Some text inside the first card</p>
+                              </div>
+                            </div>
+                            <div id="electrical_dep_6" class="card bg-danger">
                               <div class="card-body text-center">
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
@@ -216,7 +216,7 @@
                 </container>
                 <container id="electronics_events" style="display: none">
                         <div class="card-deck">
-                                <div class="card bg-warning">
+                                <div id="electronics_dep_1" class="card bg-warning">
                                   <div class="card-body text-center">
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
@@ -224,7 +224,7 @@
                                     <p class="card-text">Some text inside the first card</p>
                                   </div>
                                 </div>
-                                <div class="card bg-warning">
+                                <div id="electronics_dep_2"  class="card bg-warning">
                                   <div class="card-body text-center">
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
@@ -234,7 +234,7 @@
                                 </div>
                         </div> <br>
                         <div class="card-deck">
-                                <div class="card bg-warning">
+                                <div id="electronics_dep_3" class="card bg-warning">
                                   <div class="card-body text-center">
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
@@ -242,7 +242,7 @@
                                     <p class="card-text">Some text inside the first card</p>
                                   </div>
                                 </div>
-                                <div class="card bg-warning">
+                                <div id="electronics_dep_4"  class="card bg-warning">
                                   <div class="card-body text-center">
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
@@ -252,7 +252,7 @@
                                 </div>
                         </div><br>
                         <div class="card-deck">
-                                <div class="card bg-warning">
+                                <div id="electronics_dep_5" class="card bg-warning">
                                   <div class="card-body text-center">
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
@@ -260,8 +260,8 @@
                                     <p class="card-text">Some text inside the first card</p>
                                   </div>
                                 </div>
-                                <div class="card bg-warning">
-                                  <div class="card-body text-center">
+                                <div id="electronics_dep_6" class="card bg-warning">
+                                  <div  class="card-body text-center">
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
@@ -272,7 +272,7 @@
                     </container>
                     <container id="mechanical_events" style="display: none" >
                             <div class="card-deck">
-                                    <div class="card bg-secondary">
+                                    <div id="mech_dep_1" class="card bg-secondary">
                                       <div class="card-body text-center">
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
@@ -280,25 +280,7 @@
                                         <p class="card-text">Some text inside the first card</p>
                                       </div>
                                     </div>
-                                    <div class="card bg-secondary">
-                                      <div class="card-body text-center">
-                                            <p class="card-text">Some text inside the first card</p>
-                                            <p class="card-text">Some text inside the first card</p>
-                                            <p class="card-text">Some text inside the first card</p>
-                                            <p class="card-text">Some text inside the first card</p>
-                                      </div>
-                                    </div>
-                            </div><br>
-                            <div class="card-deck">
-                                    <div class="card bg-secondary">
-                                      <div class="card-body text-center">
-                                        <p class="card-text">Some text inside the first card</p>
-                                        <p class="card-text">Some text inside the first card</p>
-                                        <p class="card-text">Some text inside the first card</p>
-                                        <p class="card-text">Some text inside the first card</p>
-                                      </div>
-                                    </div>
-                                    <div class="card bg-secondary">
+                                    <div id="mech_dep_2" class="card bg-secondary">
                                       <div class="card-body text-center">
                                             <p class="card-text">Some text inside the first card</p>
                                             <p class="card-text">Some text inside the first card</p>
@@ -308,7 +290,7 @@
                                     </div>
                             </div><br>
                             <div class="card-deck">
-                                    <div class="card bg-secondary">
+                                    <div id="mech_dep_3" class="card bg-secondary">
                                       <div class="card-body text-center">
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
@@ -316,7 +298,25 @@
                                         <p class="card-text">Some text inside the first card</p>
                                       </div>
                                     </div>
-                                    <div class="card bg-secondary">
+                                    <div id="mech_dep_4" class="card bg-secondary">
+                                      <div class="card-body text-center">
+                                            <p class="card-text">Some text inside the first card</p>
+                                            <p class="card-text">Some text inside the first card</p>
+                                            <p class="card-text">Some text inside the first card</p>
+                                            <p class="card-text">Some text inside the first card</p>
+                                      </div>
+                                    </div>
+                            </div><br>
+                            <div class="card-deck">
+                                    <div id="mech_dep_5" class="card bg-secondary">
+                                      <div class="card-body text-center">
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                        <p class="card-text">Some text inside the first card</p>
+                                      </div>
+                                    </div>
+                                    <div id="mech_dep_6" class="card bg-secondary">
                                       <div class="card-body text-center">
                                             <p class="card-text">Some text inside the first card</p>
                                             <p class="card-text">Some text inside the first card</p>
@@ -418,12 +418,14 @@ tl.from('#codeline43', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"
         function computer_reveal()
         {
           var tl = new TimelineMax();
-  tl.from('#cs_dep_1', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
-  .from('#cs_dep_2', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
-  .from('#cs_dep_3', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
-  .from('#cs_dep_4', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
-  .from('#cs_dep_5', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
-  .from('#cs_dep_6', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          tl.from('#computer_events', .8, {scaleX:0, transformOrigin: "right", ease: "easeOut"})        
+          .from('#cs_dep_1', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#cs_dep_2', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#cs_dep_3', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#cs_dep_4', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#cs_dep_5', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#cs_dep_6', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          
             var content=document.getElementById("dep_tab").style.minWidth="100%";
             var content=document.getElementById("dep_tab").style.display="flex";
             var content=document.getElementById("computer_events").style.display="block";
@@ -433,6 +435,16 @@ tl.from('#codeline43', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"
         }
         function electrical_reveal()
         {
+          var tl = new TimelineMax();
+          tl.from('#electrical_events', .8, {scaleX:0, transformOrigin: "right", ease: "easeOut"})        
+          .from('#electrical_dep_1', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#electrical_dep_2', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#electrical_dep_3', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#electrical_dep_4', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#electrical_dep_5', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#electrical_dep_6', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          var content=document.getElementById("dep_tab").style.minWidth="100%";
+            var content=document.getElementById("dep_tab").style.display="flex";
             var content=document.getElementById("computer_events").style.display="none";
             var content2=document.getElementById("electrical_events").style.display="block";
             var content3=document.getElementById("electronics_events").style.display="none";
@@ -440,13 +452,34 @@ tl.from('#codeline43', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"
         }
         function electronics_reveal()
         {
-            var content=document.getElementById("computer_events").style.display="none";
+          var tl = new TimelineMax();
+          
+          tl.from('#electronics_events', .8, {scaleX:0, transformOrigin: "right", ease: "easeOut"})        
+          .from('#electronics_dep_1', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#electronics_dep_2', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#electronics_dep_3', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#electronics_dep_4', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#electronics_dep_5', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#electronics_dep_6', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          var content=document.getElementById("dep_tab").style.minWidth="100%";
+            var content=document.getElementById("dep_tab").style.display="flex";
+            
             var content2=document.getElementById("electrical_events").style.display="none";
             var content3=document.getElementById("electronics_events").style.display="block";
             var content4=document.getElementById("mechanical_events").style.display="none";
         }
         function mechanical_reveal()
         {
+          var tl = new TimelineMax();
+          tl.from('#mechanical_events', .8, {scaleX:0, transformOrigin: "right", ease: "easeOut"})        
+          .from('#mech_dep_1', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#mech_dep_2', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#mech_dep_3', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#mech_dep_4', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#mech_dep_5', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          .from('#mech_dep_6', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
+          var content=document.getElementById("dep_tab").style.minWidth="100%";
+            var content=document.getElementById("dep_tab").style.display="flex";
             var content=document.getElementById("computer_events").style.display="none";
             var content2=document.getElementById("electrical_events").style.display="none";
             var content3=document.getElementById("electronics_events").style.display="none";
@@ -459,7 +492,7 @@ tl.from('#codeline43', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"
               "number": {
                   "value": 50,
                   "density": {
-                      "enable": true,
+                      "enable": false,
                       "value_area": 350
                   }
               },
