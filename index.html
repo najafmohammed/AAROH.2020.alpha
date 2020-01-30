@@ -3,11 +3,13 @@
 <html>
     <head>
             <link rel="stylesheet" href="css/homepage.css">
+            <link rel="stylesheet" href="css/hover.css">
             <link rel="stylesheet" href="font/fontstyle.css">
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
             <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>AAROH 2020</title>
     <style>
         body,html 
         {
@@ -63,45 +65,65 @@
         .logo_containers {height:15vh;width:80vw;}
         .logo_containers > div{height:auto;width:10vw;}
         .logo_text_containers{top: 90%;}
-        .ring_logo{height: 20vh;width:20vw;}
+        
         }
         
         @media only screen and (min-width: 1200px) {
         .logo_containers {height:15vh;width:80vw;}
         .logo_containers > div{height:auto;width:10vw;}
         .logo_text_containers{top: 90%;}
-        .ring_logo{height: 10vh;width:10vw;}
+        .dragger{left:48%;}
         }
         
 .dragger {
-  width: 80px;
-  height: 80px;
-  
+  width: 5vw;
+  height: 10vh;
+  min-height: 100px;
+  min-width: 80px;
   text-align: center;
-  line-height: 50px;
-  position: absolute;
+  position: absolute;;
   top:35%;
-  left: 48%;
+  left: 46.5%;
+  
   transform: rotateY(0deg) rotate(320deg); /* needs Y at 0 deg to behave properly*/
     /*transition: transform .1s;*/
 }
-.dragger1 {
-  width: 80px;
-  height: 80px;
-  
-  text-align: center;
-  line-height: 50px;
-  position: absolute;
-  top:35%;
-  left: 48%;
-  transform: rotateY(0deg) rotate(320deg); /* needs Y at 0 deg to behave properly*/
-    /*transition: transform .1s;*/
-}
-
     </style>
     </head>
     <body onload="welcome_msg()">
-        <div class="w3-sidebar w3-bar-block w3-animate-right" style="display:none;z-index:5;width:100%;right:0" id="mySidebar">
+            <div class="container">
+                    
+                    
+                  
+                    <!-- The Modal -->
+                    <div class="modal fade" id="myModal">
+                      <div class="modal-dialog w3-purple">
+                        <div class="modal-content w3-black">
+                        
+                          <!-- Modal Header -->
+                          <div class="modal-header">
+                            <h4 class="modal-title">MINI GAME UNLOCKED</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          </div>
+                          
+                          <!-- Modal body -->
+                          <div class="modal-body">
+                            <p>MINI GAME HAS BEEN UNLOCKED</p>
+                            <p>GAME UNDER MAINTENANCE</p>
+                            <a href="pages/misc/game.html"<i class="btn btn-danger">PLAY</i></a>
+                          </div>
+                          
+                          <!-- Modal footer -->
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+        <div class="w3-sidebar w3-bar-block w3-animate-right" style="display:none;z-index:57;width:100%;right:0" id="mySidebar">
             <button class="w3-bar-item w3-button w3-xlarge" style="right:0" onclick="w3_close()">Close &times;</button>
             
             <a href="pages/Events/Event 1.html" class="w3-bar-item w3-button w3-xlarge w3-animate-zoom">EVENTS</a>
@@ -118,20 +140,25 @@
             <button id="buttonf" class="w3-button w3-text-aqua w3-xxlarge" onclick="w3_open()" style="background-color:transparent;z-index:10;position:fixed;right:0">&#9776;MENU</button>
             
             
-            <div id="dragger" class="dragger"><img id="rocket" src="test rocket.png" alt="image"></div>
+            <div id="dragger" class="dragger "><img id="rocket" src="test rocket.png" alt="image"></div>
         <div id="particles-js" class="custom"> 
                 <div id ="message" class="text_2 w3-text-purple a ">Welcome </div>
                 
                 <div style="animation-duration: 7.5s;animation-timing-function: ease-out" class="w3-animate-opacity">    
                     <div  class="text_1 a  anim">AAROH '20</div>
                 </div>
-                    <div class="logo_text"> <i id=text_icon class=" w3-xlarge w3-animate-left">.</i> </div>
+                    <div class="logo_text"> <i id=text_icon class="hvr-wobble-to-bottom-right w3-xlarge w3-animate-opacity">.</i> </div>
                     <div class="logo_containers">   
-                    <div onmouseover="current_icon1()" class="w3-btn w3-animate-left" style=height:auto;margin-left:3vw;flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out "> <a href="pages/Events/Event 1.html"><i class="fixbox far fa-calendar-alt "></a></i></div>
-                    <div onmouseover="current_icon2()"class="w3-btn w3-animate-top" style="flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"> <a href="pages/Events/Event 1.html"><i class="fixbox far fa-calendar-alt "></a></i></div>
-                    <div onmouseover="current_icon3()"class="w3-btn w3-animate-bottom" style="flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><a href="pages/Events/Event 1.html"><i class="fixbox far fa-calendar-alt "></a></i></div>
-                    <div onmouseover="current_icon4()"class="w3-btn w3-animate-right" style="margin-right:3vw;flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><a href="pages/Events/Event 1.html"><i class="fixbox far fa-calendar-alt "></a></i></div>
-                    </div>
+                    <div id="icon1" onmouseover="current_icon1()"class="w3-btn  w3-animate-opacity hvr-wobble-to-bottom-right" style="height:auto;margin-left:3vw;flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out "> <a href="pages/Events/Event 1.html"><i class="fixbox far fa-calendar-alt "></a></i></div>
+                    <div id="icon2" onmouseover="current_icon2()"class="w3-btn  w3-animate-opacity hvr-wobble-to-bottom-right" style="flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"> <a href="pages/Events/Event 1.html"><i class="fixbox far fa-calendar-alt "></a></i></div>
+                    <div id="icon3" onmouseover="current_icon3()"class="w3-btn  w3-animate-opacity hvr-wobble-to-bottom-right" style="flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><a href="pages/Events/Event 1.html"><i class="fixbox far fa-calendar-alt "></a></i></div>
+                    <div id="icon4" onmouseover="current_icon4()"class="w3-btn  w3-animate-opacity hvr-wobble-to-bottom-right" style="margin-right:3vw;flex:auto;padding:1px; animation-duration: .8s;animation-timing-function: ease-out"><a href="pages/Events/Event 1.html"><i class="fixbox far fa-calendar-alt "></a></i></div>
+                    <button id="minigame" style="display: none;" type="button" class="w3-button w3-purple" data-toggle="modal" data-target="#myModal">
+                            play mini game
+                          </button> 
+                      
+                </div>
+                    
                     
                     
                         <i class="w3-bottom w3-text-white"> Developed by ...</i>
@@ -150,6 +177,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/kute.js/1.5.0/kute.min.js"></script> <!-- core KUTE.js -->
+    <script src="https://cdn.jsdelivr.net/kute.js/1.6.5/kute-svg.min.js"></script> <!-- SVG Plugin -->
+    
     <script>
         function w3_open() {
           document.getElementById("mySidebar").style.display = "block";
@@ -167,21 +197,31 @@
 
         var StartX , StartY ;
         var angleDeg;
+        var myvar;
         var tl = new TimelineMax();
-        
+       
         Draggable.create("#dragger", {
+            dragClickables: false,
 
         onDrag:function(){ 
             StartX=this.x;
             StartY=this.y;
             angleDeg = Math.atan2(StartY,StartX) * 180 / Math.PI;
-        
+            
         },
         onRelease:function(){
-
-            tl.to("#dragger", 1.5, { x:0,y: -150,rotation:-angleDeg,ease: Back.easeOut.config(1.7)});
-            tl.to("#dragger", 2, { x:0,y:-100,rotation:320,ease: Back.easeOut.config(1.7)});
+            
+            tl.to("#dragger", 1.5, { x:0,y: -150,rotation:angleDeg,ease: Back.easeOut.config(1.7)});
+            tl.to("#dragger", 1, { x:0,y:-100,rotation:320,ease: Back.easeOut.config(1.7)});
             tl.to("#dragger", 1.0, { x:0,y:0,ease: Sine.easeOut});
+            myVar = setTimeout(next,4000);
+            function next(){
+                var opengame=document.getElementById("minigame").style.display="block";
+                opengame=document.getElementById("icon1").style.display="none";
+                opengame=document.getElementById("icon2").style.display="none";
+                opengame=document.getElementById("icon3").style.display="none";
+                opengame=document.getElementById("icon4").style.display="none";
+            }
         }
         });
           </script>

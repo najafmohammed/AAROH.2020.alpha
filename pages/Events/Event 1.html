@@ -21,46 +21,7 @@
           position: relative;
             
         }
-        .parallelogram1 {
-        animation-duration: .4s;animation-timing-function: ease-out;
-        left: -1%;
-	    width: 30vw;
-        height: 4vh;
-        border-style: solid;
-        border-color: black;
-	    transform: skew(340deg);
-	    
-        }
-        .parallelogram2 {
-        animation-duration: .6s;animation-timing-function: ease-out;
-        left: -1%;
-	    width: 25vw;
-        height: 4vh;
-        border-style: solid;
-        border-color: black;
-	    transform: skew(340deg);
-	   
-        }
-        .parallelogram3 {
-        animation-duration: .8s;animation-timing-function: ease-out;
-        left: -1%;
-	    width: 20vw;
-        height: 4vh;
-        border-style: solid;
-        border-color: black;
-	    transform: skew(340deg);
-	    
-        }
-        .parallelogram4 {
-        animation-duration: 1s;animation-timing-function: ease-out;
-        left: -1%;
-	    width: 15vw;
-        height: 4vh;
-        border-style: solid;
-        border-color: black;
-	    transform: skew(340deg);
-	    
-        }
+        
         .custom
         {
           height: 100%;
@@ -69,20 +30,19 @@
         }
         .info_class{
             height: 80vh;
-            width: 70vw;
+            width: 60vw;
             overflow-x: auto;
             overflow-y: scroll;
             position: absolute;
             top:20%;
-            left:35%;
+            right:1%;
         }
 .sidenav {
   width: 20vw;
   position: fixed;
   z-index: 1;
-  top: 20px;
+  top: 60px;
   left: 10px;
-  background: #eee;
   overflow-x: hidden;
   padding: 8px 0;
 }
@@ -94,6 +54,7 @@
 }
     </style>
     <body>
+       
             <div class="w3-sidebar w3-bar-block w3-animate-right" style="display:none;z-index:5;width:40%;right:0" id="mySidebar">
                     <button class="w3-bar-item w3-button w3-xlarge" style="right:0" onclick="w3_close()">Close &times;</button>
                     <a href="../../index.html" class="w3-bar-item w3-button w3-xlarge w3-animate-zoom">HOME</a>
@@ -112,25 +73,26 @@
                     
             <div id="particles-js" class="custom">
         <h1 style="position: absolute;left:50%;top:0%" class="w3-text-white">EVENTS</h1>
-        <div class="sidenav" style="background:transparent;min-width:150px;">
+        
+        <div class="sidenav" style="background:transparent;min-width:160px;">
             
            <div onclick=computer_reveal()  class="w3-border w3-border-purple text-white" style="background:transparent;">
-                
                 <svg class="card-img-top"  height="100px">
-                        <use href="#Layer_1"  x="0" y="0"/>
+                        <use  href="#Layer_1"  x="0" y="0"/>
+
                       </svg> 
-                <h4 class="card-title w3-center" style="background: transparent;">COMPUTER</h4>
+                <h4 class="card-title w3-center btn-dark">COMPUTER</h4>
             </div><br>
             <div onclick=electrical_reveal() class="card bg-dark">
-                    <img class="card-img-top" src="background_main.png" height="100px alt="Card image"> 
+                    <img class="card-img-top" src="background_main.png" height="100px" alt="Card image"> 
                     <h4 class="card-title w3-center" style="background: transparent;">ELECTRICAL</h4>
                 </div><br>
             <div onclick="electronics_reveal()" class="card bg-dark">
-                <img class="card-img-top" src="background_main.png" height="100px alt="Card image"> 
+                <img class="card-img-top" src="background_main.png" height="100px" alt="Card image"> 
                 <h4 class="card-title w3-center" style="background: transparent;">ELECTRONICS</h4>
             </div></<div><br>
             <div onclick="mechanical_reveal()" class="card bg-dark">
-                <img class="card-img-top" src="background_main.png" height="100px alt="Card image"> 
+                <img class="card-img-top" src="background_main.png" height="100px" alt="Card image"> 
                 <h4 class="card-title w3-center" style="background: transparent;">MECHANICAL</h4>
             </div></<div> <br>
           </div>
@@ -368,7 +330,7 @@
                 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
              <g>
                <path style="fill:#E8EDEE;" d="M361.931,494.345H150.069c0-19.5,15.81-35.31,35.31-35.31h141.241C346.121,459.034,361.931,474.845,361.931,494.345"/>
-               <polygon style="fill:#B0B6BB;" points="317.793,459.034 194.207,459.034 211.862,388.414 300.138,388.414 	"/>
+               <polygon  style="fill:#B0B6BB;" points="317.793,459.034 194.207,459.034 211.862,388.414 300.138,388.414 	"/>
                <path id="screen"style="fill:#38454F;" d="M512,317.793H0V48.552c0-17.064,13.833-30.897,30.897-30.897h450.207c17.064,0,30.897,13.833,30.897,30.897V317.793z"/>
                <path  style="fill:#E8EDEE;" d="M481.103,388.414H30.897C13.833,388.414,0,374.581,0,357.517v-39.724h512v39.724C512,374.581,498.167,388.414,481.103,388.414"/>
                <g>
@@ -387,7 +349,7 @@
                  <path id=codeline2dot style="fill:#EA6148;" d="M264.828,123.586c-2.295,0-4.599-0.971-6.268-2.56c-0.794-0.883-1.412-1.854-1.854-2.913S256,115.906,256,114.759c0-1.148,0.265-2.295,0.706-3.354s1.059-2.03,1.854-2.913c2.03-2.03,5.12-2.913,7.936-2.383c0.627,0.088,1.148,0.265,1.686,0.53c0.521,0.177,1.059,0.441,1.501,0.794c0.521,0.353,0.971,0.706,1.324,1.059c0.883,0.883,1.501,1.854,1.942,2.913s0.706,2.207,0.706,3.354c0,1.148-0.265,2.295-0.706,3.354s-1.059,2.03-1.942,2.913c-0.353,0.353-0.803,0.706-1.324,1.059c-0.441,0.353-0.98,0.618-1.501,0.794c-0.538,0.265-1.059,0.441-1.686,0.53C265.975,123.498,265.357,123.586,264.828,123.586"/>
                  <path id=codeline32 style="fill:#EA6148;" d="M308.966,176.552c-2.392,0-4.599-0.971-6.268-2.56c-1.598-1.677-2.56-3.972-2.56-6.268c0-2.295,0.962-4.59,2.56-6.268c3.266-3.266,9.269-3.266,12.535,0c1.589,1.677,2.56,3.972,2.56,6.268c0,0.618-0.088,1.148-0.185,1.766c-0.079,0.53-0.256,1.059-0.521,1.589c-0.185,0.53-0.441,1.059-0.794,1.589c-0.353,0.441-0.706,0.883-1.059,1.324C313.556,175.581,311.349,176.552,308.966,176.552"/>
                </g>
-               <polygon id=yellowbox style="fill:#ECBA16;" points="79.448,176.552 203.034,176.552 203.034,52.966 79.448,52.966 	"/>
+               <polygon  id=yellowbox style="fill:#ECBA16;" points="79.448,176.552 203.034,176.552 203.034,52.966 79.448,52.966 	"/>
              </g>
              </svg></div>
     </body>
@@ -395,6 +357,7 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="../../js/TimelineMax.min.js"></script>
     <script src="../../js/TweenMax.min.js"></script>
+  
     <script>
         
 var tl = new TimelineMax({repeat:3});
