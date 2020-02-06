@@ -1,2 +1,99 @@
+<!DOCTYPE html>
+<?xml version="1.0" encoding="iso-8859-1"?>
 <html>
+    <head>
+            <head>
+                    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+                    
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                </head>
+    </head>
+    <style>
+        body,html 
+        {
+            margin: 0 auto;
+            height: 100%;
+            width: 100%;
+            scroll-behavior: smooth;
+            background-image: url('background_main.png');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+            
+        }
+        .dragger {
+        width: 10px;
+        height: 20px;
+        min-height: 100px;
+        min-width: 80px;
+        max-height: 150px;
+        max-width: 130px;
+        position: absolute;
+        bottom:10%;
+        left: 50%;
+        transform: rotateY(0deg) rotate(320deg); /* needs Y at 0 deg to behave properly*/
+        /*transition: transform .1s;*/
+        }
+        .asteroid {
+        width: 10px;
+        height: 20px;
+        min-height: 100px;
+        min-width: 80px;
+        max-height: 150px;
+        max-width: 130px;
+        position: absolute;
+        top:10%;
+        left: 50%;}
+    </style>
+    <body>
+       
+            <div id="dragger" class="dragger"><img id="rocket" src="../../test rocket.png"  height="100px" width="90px"></div>
+            <div id="asteroid" class="asteroid" style="left:10%;"><img id="rocket" src="../misc/meteor.png"  height="200px" width="300px"></div>
+            <div id="asteroid" class="asteroid" style="left:20%;"><img id="rocket" src="../misc/meteor.png"  height="200px" width="300px"></div>
+            <div id="asteroid" class="asteroid" style="left:30%;"><img id="rocket" src="../misc/meteor.png"  height="200px" width="300px"></div>
+            <div id="asteroid" class="asteroid" style="left:40%;"><img id="rocket" src="../misc/meteor.png"  height="200px" width="300px"></div>
+            <div id="asteroid" class="asteroid" style="left:50%;"><img id="rocket" src="../misc/meteor.png"  height="200px" width="300px"></div>
+            <div id="asteroid" class="asteroid" style="left:60%;"><img id="rocket" src="../misc/meteor.png"  height="200px" width="300px"></div>
+            <div id="asteroid" class="asteroid" style="left:70%;"><img id="rocket" src="../misc/meteor.png"  height="200px" width="300px"></div>
+            
+        
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/utils/Draggable.min.js"></script>
+    <script src="../../js/TimelineMax.min.js"></script>
+    <script src="../../js/TweenMax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script>
+
+var gridWidth = 300;
+var gridHeight = 100;
+
+let animation = anime({
+  targets: '#asteroid',
+  translateY: 1000,
+  duration: 5000,
+  easing: 'linear',
+  direction: 'alternate'
+  
+});    
+
+Draggable.create("#dragger", {
+    type:"x",
+    edgeResistance:0.15,
+    bounds:"body",
+    inertia:true,
+    liveSnap:true,
+    snap: {
+        x: function(endValue) {
+            return Math.round(endValue / gridWidth) * gridWidth;
+        },
+        y: function(endValue) {
+            return Math.round(endValue / gridHeight) * gridHeight;
+        }
+    }
+});
+
+              </script>
 </html>
