@@ -35,7 +35,7 @@
             overflow-x: auto;
             overflow-y: scroll;
             position: absolute;
-            top:30%;
+            top:35%;
             right:1%;
         }
 .sidenav {
@@ -48,6 +48,14 @@
   padding: 8px 0;
 }
 
+.dep-events{
+	
+	background-image: linear-gradient(to right, rgba(255,255,255,0) 20%,
+              rgba(255, 235, 59, 1)),url('pubg.jpg');
+	background-size:70%;
+	background-repeat:no-repeat;
+	background-position: -50px; 
+}
 
 
 @media screen and (max-height: 450px) {
@@ -84,32 +92,43 @@
                         <use  href="#Layer_1"  x="0" y="0"/>
 
                       </svg> 
-                <h6 class="card-title w3-center btn-dark">COMPUTER</h6>
+                <h6 class="card-title text-sm w3-center" style="background: transparent;">COMPUTER</h6>
             </div><br>
-            <div onclick=electrical_reveal() class="card bg-dark">
-                    <img class="card-img-top" src="background_main.png" height="100px" alt="Card image"> 
+            <div onclick=electrical_reveal() class="w3-border w3-border-purple text-white" style="background:transparent;">
+                     <svg class="card-img-top"  height="100px">
+                        <use  href="#Layer_1"  x="0" y="0"/>
+
+                      </svg>
                     <h6 class="card-title text-sm w3-center" style="background: transparent;">ELECTRICAL</h6>
                 </div><br>
-            <div onclick="electronics_reveal()" class="card bg-dark">
-                <img class="card-img-top" src="background_main.png" height="100px" alt="Card image"> 
+            <div onclick="electronics_reveal()" class="w3-border w3-border-purple text-white" style="background:transparent;">
+                 <svg class="card-img-top"  height="100px">
+                        <use  href="#Layer_1"  x="0" y="0"/>
+
+                      </svg>
                 <h6 class="card-title w3-center" style="background: transparent;">ELECTRONICS</h6>
             </div></<div><br>
-            <div onclick="mechanical_reveal()" class="card bg-dark">
-                <img class="card-img-top" src="background_main.png" height="100px" alt="Card image"> 
+            <div onclick="mechanical_reveal()" class="w3-border w3-border-purple text-white" style="background:transparent;">
+                 <svg class="card-img-top"  height="100px">
+                        <use  href="#Layer_1"  x="0" y="0"/>
+
+                      </svg>
                 <h6 class="card-title w3-center" style="background: transparent;">MECHANICAL</h6>
             </div></<div> <br>
           </div>
             </div>
-
+	
            <div  id="Main_content" class="info_class .bg-secondary w3-text-white" style="display: block;">
-            <container id="computer_events" style="display: none;padding:1px;">
-                <div class="card-deck">
-                        <div id="cs_dep_1" class="card bg-primary">
-                          <div  class="card-body text-center" style="background-image: url('background_main.png');">
-                            <p class="card-text">Some text inside the first card</p>
-                            <p class="card-text">Some text inside the first card</p>
-                            <p class="card-text">Some text inside the first card</p>
-                            <p class="card-text">Some text inside the first card</p>
+            <container id="computer_events" style="display: none;margin-left:10px;padding:10px;">
+                <div class="card-deck" style="background:transparent;">
+                	
+                        <div id="cs_dep_1" class="card" style="background:transparent;">                    
+                          <div  class="card-body dep-events w3-yellow w3-round-xxlarge">
+                          <div class="w3-right">
+                            <h1 class="w3-border text-center w3-round-large w3-black w3-text-yellow">PUBG</h1>
+                            <br><br>
+                            <h5 class="w3-button w3-green w3-round-large w3-border w3-text-black" style="opacity:0.9">Register</h5>
+                            </div>
                           </div>
                         </div>
                         <div id="cs_dep_2" class="card bg-primary">
@@ -417,8 +436,10 @@ tl.from('#codeline43', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"
         
         function computer_reveal()
         {
+         
+          var myDiv = document.getElementById('Main_content');myDiv.scrollTop = 0;
           var tl = new TimelineMax();
-          tl.from('#computer_events', .8, {scaleX:0, transformOrigin: "right", ease: "easeOut"})        
+          tl.from('#computer_events', .3, {scaleX:0, transformOrigin: "right", ease: "easeOut"})        
           .from('#cs_dep_1', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
           .from('#cs_dep_2', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
           .from('#cs_dep_3', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
@@ -435,8 +456,9 @@ tl.from('#codeline43', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"
         }
         function electrical_reveal()
         {
+          var myDiv = document.getElementById('Main_content');myDiv.scrollTop = 0;
           var tl = new TimelineMax();
-          tl.from('#electrical_events', .8, {scaleX:0, transformOrigin: "right", ease: "easeOut"})        
+          tl.from('#electrical_events', .3, {scaleX:0, transformOrigin: "right", ease: "easeOut"})        
           .from('#electrical_dep_1', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
           .from('#electrical_dep_2', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
           .from('#electrical_dep_3', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
@@ -452,9 +474,10 @@ tl.from('#codeline43', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"
         }
         function electronics_reveal()
         {
+          var myDiv = document.getElementById('Main_content');myDiv.scrollTop = 0;
           var tl = new TimelineMax();
           
-          tl.from('#electronics_events', .8, {scaleX:0, transformOrigin: "right", ease: "easeOut"})        
+          tl.from('#electronics_events', .3, {scaleX:0, transformOrigin: "right", ease: "easeOut"})        
           .from('#electronics_dep_1', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
           .from('#electronics_dep_2', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
           .from('#electronics_dep_3', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
@@ -470,8 +493,9 @@ tl.from('#codeline43', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"
         }
         function mechanical_reveal()
         {
+          var myDiv = document.getElementById('Main_content');myDiv.scrollTop = 0;
           var tl = new TimelineMax();
-          tl.from('#mechanical_events', .8, {scaleX:0, transformOrigin: "right", ease: "easeOut"})        
+          tl.from('#mechanical_events', .3, {scaleX:0, transformOrigin: "right", ease: "easeOut"})        
           .from('#mech_dep_1', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
           .from('#mech_dep_2', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
           .from('#mech_dep_3', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
