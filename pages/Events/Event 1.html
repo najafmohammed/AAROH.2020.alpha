@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../css/hover.css">
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -52,9 +53,9 @@
 	
 	background-image: linear-gradient(to right, rgba(255,255,255,0) 20%,
               rgba(255, 235, 59, 1)),url('pubg.jpg');
-	background-size:70%;
+	background-size:cover;
 	background-repeat:no-repeat;
-	background-position: -50px; 
+	background-position: -10px; 
 }
 
 
@@ -87,7 +88,7 @@
         
         <div id="dep_tab" class="sidenav w3-animate-opacity" style="background:transparent;min-width:400px;">
             
-           <div onclick=computer_reveal()  class="w3-border w3-border-purple text-white" style="background:transparent;">
+           <div onclick=computer_reveal()  class="w3-border w3-border-purple text-white " style="background:transparent;">
                 <svg class="card-img-top"  height="100px">
                         <use  href="#Layer_1"  x="0" y="0"/>
 
@@ -122,8 +123,8 @@
             <container id="computer_events" style="display: none;margin-left:10px;padding:10px;">
                 <div class="card-deck" style="background:transparent;">
                 	
-                        <div id="cs_dep_1" class="card" style="background:transparent;">                    
-                          <div  class="card-body dep-events w3-yellow w3-round-xxlarge">
+                        <div onclick="reveal_expand()" id="cs_dep_1" class="card" style="background:transparent;">                    
+                          <div  class="card-body dep-events w3-yellow w3-round-xxlarge hvr-wobble-to-bottom-right">
                           <div class="w3-right">
                             <h1 class="w3-border text-center w3-round-large w3-black w3-text-yellow">PUBG</h1>
                             <br><br>
@@ -131,18 +132,20 @@
                             </div>
                           </div>
                         </div>
-                        <div id="cs_dep_2" class="card bg-primary">
-                          <div  class="card-body text-center">
-                                <p class="card-text">Some text inside the first card</p>
-                                <p class="card-text">Some text inside the first card</p>
-                                <p class="card-text">Some text inside the first card</p>
-                                <p class="card-text">Some text inside the first card</p>
-                          </div>
+
+                        <div id="cs_dep_2" class="card" style="background:transparent">
+                          <div  class="card-body  w3-yellow w3-round-xxlarge hvr-wobble-to-bottom-right" style="background: transparent;background-image: linear-gradient(to right, rgba(255,255,255,0) 20%,rgba(50, 83, 122, 1)),url('fifa.jpg');background-size:cover;background-repeat:no-repeat;">
+                            <div class="w3-right">
+                              <h1 class="w3-border text-center w3-round-large w3-black w3-text-blue ">FIFA</h1>
+                              <br><br>
+                              <h5 class="w3-button w3-green w3-round-large w3-border w3-text-black" style="opacity:0.9">Register</h5>
+                              </div>
+                            </div>
                         </div>
                 </div><br>
                 <div class="card-deck">
                         <div id="cs_dep_3" class="card bg-primary">
-                          <div class="card-body text-center">
+                          <div class="card-body  hvr-wobble-to-bottom-right text-center">
                             <p class="card-text">Some text inside the first card</p>
                             <p class="card-text">Some text inside the first card</p>
                             <p class="card-text">Some text inside the first card</p>
@@ -150,7 +153,7 @@
                           </div>
                         </div>
                         <div id="cs_dep_4" class="card bg-primary">
-                          <div  class="card-body text-center">
+                          <div  class="card-body  hvr-wobble-to-bottom-right text-center">
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
@@ -160,7 +163,7 @@
                 </div><br>
                 <div class="card-deck">
                         <div id="cs_dep_5" class="card bg-primary">
-                          <div  class="card-body text-center">
+                          <div  class="card-body  hvr-wobble-to-bottom-right text-center">
                             <p class="card-text">Some text inside the first card</p>
                             <p class="card-text">Some text inside the first card</p>
                             <p class="card-text">Some text inside the first card</p>
@@ -168,7 +171,7 @@
                           </div>
                         </div>
                         <div id="cs_dep_6"class="card bg-primary">
-                          <div  class="card-body text-center">
+                          <div  class="card-body  hvr-wobble-to-bottom-right text-center">
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
@@ -180,7 +183,7 @@
             <container id="electrical_events" style="display: none">
                     <div class="card-deck">
                             <div id="electrical_dep_1" class="card bg-danger">
-                              <div class="card-body text-center">
+                              <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
@@ -188,7 +191,7 @@
                               </div>
                             </div>
                             <div id="electrical_dep_2" class="card bg-danger">
-                              <div class="card-body text-center">
+                              <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
@@ -198,7 +201,7 @@
                     </div><br>
                     <div class="card-deck">
                             <div id="electrical_dep_3" class="card bg-danger">
-                              <div class="card-body text-center">
+                              <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
@@ -206,7 +209,7 @@
                               </div>
                             </div>
                             <div id="electrical_dep_4" class="card bg-danger">
-                              <div class="card-body text-center">
+                              <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
@@ -216,7 +219,7 @@
                     </div><br>
                     <div class="card-deck">
                             <div id="electrical_dep_5" class="card bg-danger">
-                              <div class="card-body text-center">
+                              <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
                                 <p class="card-text">Some text inside the first card</p>
@@ -224,7 +227,7 @@
                               </div>
                             </div>
                             <div id="electrical_dep_6" class="card bg-danger">
-                              <div class="card-body text-center">
+                              <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
@@ -236,7 +239,7 @@
                 <container id="electronics_events" style="display: none">
                         <div class="card-deck">
                                 <div id="electronics_dep_1" class="card bg-warning">
-                                  <div class="card-body text-center">
+                                  <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
@@ -244,7 +247,7 @@
                                   </div>
                                 </div>
                                 <div id="electronics_dep_2"  class="card bg-warning">
-                                  <div class="card-body text-center">
+                                  <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
@@ -254,7 +257,7 @@
                         </div> <br>
                         <div class="card-deck">
                                 <div id="electronics_dep_3" class="card bg-warning">
-                                  <div class="card-body text-center">
+                                  <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
@@ -262,7 +265,7 @@
                                   </div>
                                 </div>
                                 <div id="electronics_dep_4"  class="card bg-warning">
-                                  <div class="card-body text-center">
+                                  <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
@@ -272,7 +275,7 @@
                         </div><br>
                         <div class="card-deck">
                                 <div id="electronics_dep_5" class="card bg-warning">
-                                  <div class="card-body text-center">
+                                  <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
                                     <p class="card-text">Some text inside the first card</p>
@@ -280,7 +283,7 @@
                                   </div>
                                 </div>
                                 <div id="electronics_dep_6" class="card bg-warning">
-                                  <div  class="card-body text-center">
+                                  <div  class="card-body  hvr-wobble-to-bottom-right text-center">
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
@@ -292,7 +295,7 @@
                     <container id="mechanical_events" style="display: none" >
                             <div class="card-deck">
                                     <div id="mech_dep_1" class="card bg-secondary">
-                                      <div class="card-body text-center">
+                                      <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
@@ -300,7 +303,7 @@
                                       </div>
                                     </div>
                                     <div id="mech_dep_2" class="card bg-secondary">
-                                      <div class="card-body text-center">
+                                      <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                             <p class="card-text">Some text inside the first card</p>
                                             <p class="card-text">Some text inside the first card</p>
                                             <p class="card-text">Some text inside the first card</p>
@@ -310,7 +313,7 @@
                             </div><br>
                             <div class="card-deck">
                                     <div id="mech_dep_3" class="card bg-secondary">
-                                      <div class="card-body text-center">
+                                      <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
@@ -318,7 +321,7 @@
                                       </div>
                                     </div>
                                     <div id="mech_dep_4" class="card bg-secondary">
-                                      <div class="card-body text-center">
+                                      <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                             <p class="card-text">Some text inside the first card</p>
                                             <p class="card-text">Some text inside the first card</p>
                                             <p class="card-text">Some text inside the first card</p>
@@ -328,7 +331,7 @@
                             </div><br>
                             <div class="card-deck">
                                     <div id="mech_dep_5" class="card bg-secondary">
-                                      <div class="card-body text-center">
+                                      <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
                                         <p class="card-text">Some text inside the first card</p>
@@ -336,7 +339,7 @@
                                       </div>
                                     </div>
                                     <div id="mech_dep_6" class="card bg-secondary">
-                                      <div class="card-body text-center">
+                                      <div class="card-body  hvr-wobble-to-bottom-right text-center">
                                             <p class="card-text">Some text inside the first card</p>
                                             <p class="card-text">Some text inside the first card</p>
                                             <p class="card-text">Some text inside the first card</p>
@@ -431,7 +434,11 @@ tl.from('#codeline43', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"
               document.getElementById("buttonf").style.display = "block";
             }
             </script>
-
+<script>
+  function reveal_expand(){
+   
+  }
+  </script>
     <script>
         
         function computer_reveal()
