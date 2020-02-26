@@ -167,7 +167,7 @@
 
         <h1 style="position: absolute;left:50%;top:0%" class="w3-text-white">EVENTS</h1>
         
-        <div id="dep_tab" class="sidenav w3-animate-opacity" style="background:transparent;min-width:400px;">
+        <div id="dep_tab" class="sidenav w3-animate-opacity" style="background:transparent;min-width:400px;margin-right:1px;">
             
            <div onclick=computer_reveal()  class="w3-border w3-border-purple text-white " style="background:transparent;">
             <div id="cs_select" class="">
@@ -230,12 +230,15 @@
             <container id="computer_events" style="display: none;margin-left:10px;padding:10px;">
                 <div class="card-deck" style="background:transparent;">
                 	
-                        <div onclick="reveal_expand()" id="cs_dep_1" class="card" style="background:transparent;">                    
+                        <div onclick="reveal_expand()" id="cs_dep_1" class="card w3-display-container" style="background:transparent;">                    
                           <div  class="card-body dep-events w3-yellow w3-round-xxlarge hvr-wobble-to-bottom-right">
                           <div class="w3-right">
-                            <h1 class="w3-border text-center w3-round-large w3-black w3-text-yellow">PUBG</h1>
+                            <h1 class="w3-display-topright w3-border text-center w3-round-large w3-black w3-text-yellow" style="margin:10px">PUBG</h1>
                             <br><br>
-                            <h5 class="w3-button w3-green w3-round-large w3-border w3-text-black" style="opacity:0.9">Register</h5>
+                            <button class="w3-border w3-border-black w3-display-bottommiddle  w3-button w3-yellow w3-round-xxlarge w3-large w3-text-black" style="opacity:0.6;margin:1px" ><i class="fa fa-question-circle-o"></i>Info</button>
+                            <button class="w3-border w3-border-black w3-display-bottomright w3-button w3-yellow w3-round-xxlarge w3-large w3-text-black" style="opacity:0.9;margin:3px;" ><i class="fa fa-edit"></i>Register</button>
+                            <button class="w3-border w3-border-black w3-display-left w3-button w3-yellow w3-round-xxlarge w3-large w3-text-black" style="opacity:0.6;margin:1px;" ><i class="fa fa-calendar"></i>11/02/20</button>
+                            <button class="w3-border w3-border-black w3-display-bottomleft w3-button w3-yellow w3-round-xxlarge w3-large w3-text-black" style="opacity:0.6;margin:1px;" ><i class="fa fa-clock-o"></i>12:30 pm</button>
                             </div>
                           </div>
                         </div>
@@ -244,8 +247,8 @@
                           <div  class="card-body  w3-yellow w3-round-xxlarge hvr-wobble-to-bottom-right" style="background: transparent;background-image: linear-gradient(to right, rgba(255,255,255,0) 20%,rgba(50, 83, 122, 1)),url('fifa.jpg');background-size:cover;background-repeat:no-repeat;">
                             <div class="w3-right">
                               <h1 class="w3-border text-center w3-round-large w3-black w3-text-blue ">FIFA</h1>
-                              <br><br>
-                              <h5 class="w3-button w3-green w3-round-large w3-border w3-text-black" style="opacity:0.9">Register</h5>
+                              
+                              <h5 class="w3-display-botomright w3-button w3-green w3-round-large w3-border w3-text-black" style="opacity:0.9"> Register</h5>
                               </div>
                             </div>
                         </div>
@@ -782,7 +785,7 @@ tl.from('#codeline43', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"
           .from('#cs_dep_5', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
           .from('#cs_dep_6', .5, {scaleY: 0,scaleX:0, transformOrigin: "center", ease: "easeOut"})
           
-            var content=document.getElementById("dep_tab").style.minWidth="100%";
+            var content=document.getElementById("dep_tab").style.minWidth="95%";
             var content=document.getElementById("cs_select").className="box";
             var content=document.getElementById("electrical_select").className="";
             var content=document.getElementById("electronics_select").className="";
@@ -808,7 +811,7 @@ tl.from('#codeline43', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"
             var content=document.getElementById("electrical_select").className="box";
             var content=document.getElementById("electronics_select").className="";
             var content=document.getElementById("mech_select").className="";
-          var content=document.getElementById("dep_tab").style.minWidth="100%";
+          var content=document.getElementById("dep_tab").style.minWidth="95%";
             var content=document.getElementById("dep_tab").style.display="flex";
             var content=document.getElementById("computer_events").style.display="none";
             var content2=document.getElementById("electrical_events").style.display="block";
@@ -831,7 +834,7 @@ tl.from('#codeline43', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"
             var content=document.getElementById("electrical_select").className="";
             var content=document.getElementById("electronics_select").className="box";
             var content=document.getElementById("mech_select").className="";
-          var content=document.getElementById("dep_tab").style.minWidth="100%";
+          var content=document.getElementById("dep_tab").style.minWidth="95%";
             var content=document.getElementById("dep_tab").style.display="flex";
             
             var content2=document.getElementById("electrical_events").style.display="none";
@@ -853,7 +856,7 @@ tl.from('#codeline43', .5, {scaleX: 0, transformOrigin: "left", ease: "expo.out"
             var content=document.getElementById("electrical_select").className="";
             var content=document.getElementById("electronics_select").className="";
             var content=document.getElementById("mech_select").className="box";
-          var content=document.getElementById("dep_tab").style.minWidth="100%";
+          var content=document.getElementById("dep_tab").style.minWidth="95%";
             var content=document.getElementById("dep_tab").style.display="flex";
             var content=document.getElementById("computer_events").style.display="none";
             var content2=document.getElementById("electrical_events").style.display="none";
